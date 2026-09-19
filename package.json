@@ -1,0 +1,18 @@
+{
+  "name": "nutriguard-ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"backend,frontend\" -c \"blue,green\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "start:bg": "node scripts/start-daemon.mjs",
+    "stop:bg": "node scripts/stop-daemon.mjs",
+    "dev:frontend": "npm --prefix nutriguard-frontend run dev",
+    "dev:backend": "npm --prefix nutriguard-backend run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:frontend": "npm --prefix nutriguard-frontend run build",
+    "build:backend": "npm --prefix nutriguard-backend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
