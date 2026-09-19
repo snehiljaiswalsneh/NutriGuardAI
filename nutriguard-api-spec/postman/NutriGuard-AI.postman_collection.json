@@ -1,0 +1,2292 @@
+{
+  "info": {
+    "name": "NutriGuard AI API",
+    "description": "AI-Powered Food Ingredient Safety Analyzer \u2014 REST API. Generated from openapi/openapi.yaml.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{access_token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://api.nutriguard.ai/api/v1"
+    },
+    {
+      "key": "access_token",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Authentication",
+      "description": "Registration, login, session, and password management",
+      "item": [
+        {
+          "name": "Register a new user",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            },
+            "description": "Register a new user",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"full_name\": \"Alex Morgan\",\n  \"email\": \"alex@example.com\",\n  \"password\": \"Str0ngP@ss!\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Log in with email and password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "description": "Log in with email and password",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"alex@example.com\",\n  \"password\": \"Str0ngP@ss!\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Log out and revoke the current refresh token",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/logout",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "logout"
+              ]
+            },
+            "description": "Log out and revoke the current refresh token"
+          },
+          "response": []
+        },
+        {
+          "name": "Exchange a refresh token for a new access token",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/refresh-token",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "refresh-token"
+              ]
+            },
+            "description": "Exchange a refresh token for a new access token",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"refresh_token\": \"string\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Request a password-reset email",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/forgot-password",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "forgot-password"
+              ]
+            },
+            "description": "Request a password-reset email",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset password using a reset token",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/reset-password",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "reset-password"
+              ]
+            },
+            "description": "Reset password using a reset token",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reset_token\": \"string\",\n  \"new_password\": \"string\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Verify email using the OTP/token sent at signup",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/verify-email",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "verify-email"
+              ]
+            },
+            "description": "Verify email using the OTP/token sent at signup",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"user@example.com\",\n  \"otp\": \"string\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Validate the current session/access token",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/auth/session",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "session"
+              ]
+            },
+            "description": "Validate the current session/access token"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "description": "Profile, settings, preferences",
+      "item": [
+        {
+          "name": "Get the current user's profile",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/me",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users",
+                "me"
+              ]
+            },
+            "description": "Get the current user's profile"
+          },
+          "response": []
+        },
+        {
+          "name": "Update the current user's profile",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/me",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users",
+                "me"
+              ]
+            },
+            "description": "Update the current user's profile",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"full_name\": \"string\",\n  \"avatar_url\": \"https://example.com/image.jpg\",\n  \"country_code\": \"string\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get appearance/language/notification/privacy settings",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/me/settings",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users",
+                "me",
+                "settings"
+              ]
+            },
+            "description": "Get appearance/language/notification/privacy settings"
+          },
+          "response": []
+        },
+        {
+          "name": "Update settings (theme, language, notification preferences)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/me/settings",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users",
+                "me",
+                "settings"
+              ]
+            },
+            "description": "Update settings (theme, language, notification preferences)",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"theme\": \"light\",\n  \"language_code\": \"en\",\n  \"notify_scan_complete\": true,\n  \"notify_weekly_digest\": true,\n  \"notify_new_ban_alert\": true,\n  \"marketing_opt_in\": true,\n  \"data_sharing_opt_in\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List ingredients the user is watching for ban alerts",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/me/saved-ingredients",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users",
+                "me",
+                "saved-ingredients"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "1-indexed page number (offset-based pagination)",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Items per page (max 100)",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "List ingredients the user is watching for ban alerts"
+          },
+          "response": []
+        },
+        {
+          "name": "Add an ingredient to the watchlist",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/me/saved-ingredients",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users",
+                "me",
+                "saved-ingredients"
+              ]
+            },
+            "description": "Add an ingredient to the watchlist",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ingredient_id\": \"00000000-0000-4000-8000-000000000000\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Remove an ingredient from the watchlist",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/me/saved-ingredients/{ingredientId}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users",
+                "me",
+                "saved-ingredients",
+                ":ingredientId"
+              ],
+              "variable": [
+                {
+                  "key": "ingredientId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Remove an ingredient from the watchlist"
+          },
+          "response": []
+        },
+        {
+          "name": "Permanently delete the current user's account and data",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/me/account",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users",
+                "me",
+                "account"
+              ]
+            },
+            "description": "Permanently delete the current user's account and data",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"confirmation\": \"string\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Export all personal data (GDPR-style data portability)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/me/export",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "users",
+                "me",
+                "export"
+              ]
+            },
+            "description": "Export all personal data (GDPR-style data portability)"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Ingredients",
+      "description": "Ingredient knowledge base \u2014 search, detail, risk, allergens, regulations, alternatives",
+      "item": [
+        {
+          "name": "Search ingredients",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/ingredients",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ingredients"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "string",
+                  "description": "Free-text search (name, alias, E-number) \u2014 fuzzy + full-text",
+                  "disabled": true
+                },
+                {
+                  "key": "risk_level",
+                  "value": "safe",
+                  "description": "",
+                  "disabled": true
+                },
+                {
+                  "key": "category_id",
+                  "value": "00000000-0000-4000-8000-000000000000",
+                  "description": "",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "1-indexed page number (offset-based pagination)",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Items per page (max 100)",
+                  "disabled": true
+                },
+                {
+                  "key": "sort",
+                  "value": "string",
+                  "description": "Field + direction, e.g. `-scanned_at` (desc) or `safety_score` (asc)",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "Search ingredients",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get full ingredient detail",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/ingredients/{ingredientId}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ingredients",
+                ":ingredientId"
+              ],
+              "variable": [
+                {
+                  "key": "ingredientId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Get full ingredient detail",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get documented health effects for an ingredient",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/ingredients/{ingredientId}/health-effects",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ingredients",
+                ":ingredientId",
+                "health-effects"
+              ],
+              "variable": [
+                {
+                  "key": "ingredientId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Get documented health effects for an ingredient",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get per-country regulatory status for an ingredient",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/ingredients/{ingredientId}/regulations",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ingredients",
+                ":ingredientId",
+                "regulations"
+              ],
+              "query": [
+                {
+                  "key": "country_code",
+                  "value": "string",
+                  "description": "",
+                  "disabled": true
+                }
+              ],
+              "variable": [
+                {
+                  "key": "ingredientId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Get per-country regulatory status for an ingredient",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get allergen classifications for an ingredient",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/ingredients/{ingredientId}/allergens",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ingredients",
+                ":ingredientId",
+                "allergens"
+              ],
+              "variable": [
+                {
+                  "key": "ingredientId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Get allergen classifications for an ingredient",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get safer alternative suggestions for an ingredient",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/ingredients/{ingredientId}/alternatives",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ingredients",
+                ":ingredientId",
+                "alternatives"
+              ],
+              "variable": [
+                {
+                  "key": "ingredientId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Get safer alternative suggestions for an ingredient",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List ingredient categories (tree)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/ingredient-categories",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ingredient-categories"
+              ]
+            },
+            "description": "List ingredient categories (tree)",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List reference countries (for regulation lookups/filters)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/countries",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "countries"
+              ]
+            },
+            "description": "List reference countries (for regulation lookups/filters)",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Analysis",
+      "description": "AI-powered ingredient analysis, safety scoring, summaries",
+      "item": [
+        {
+          "name": "Analyze a raw ingredient list (creates a scan + product if needed)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/analysis",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "analysis"
+              ]
+            },
+            "description": "Kicks off the full AI analysis pipeline: matches ingredients against\nthe knowledge base, computes the safety score, generates the AI\nsummary/allergy warning, and persists a `scan`. This is an\nasynchronous, job-backed endpoint \u2014 poll `GET /scans/{scanId}` or\nsubscribe via Supabase Realtime for completion.\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"product_name\": \"Classic Cured Beef Jerky\",\n  \"brand_name\": \"TrailSnax\",\n  \"ingredient_text\": \"Beef, Water, Sodium Nitrite, Citric Acid, Tartrazine (E102)\",\n  \"input_source\": \"paste\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get full scan result (dashboard payload)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/scans/{scanId}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "scans",
+                ":scanId"
+              ],
+              "variable": [
+                {
+                  "key": "scanId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Get full scan result (dashboard payload)"
+          },
+          "response": []
+        },
+        {
+          "name": "Get just the safety score breakdown for a scan",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/scans/{scanId}/safety-score",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "scans",
+                ":scanId",
+                "safety-score"
+              ],
+              "variable": [
+                {
+                  "key": "scanId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Get just the safety score breakdown for a scan"
+          },
+          "response": []
+        },
+        {
+          "name": "Get just the AI-generated summary/allergy warning for a scan",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/scans/{scanId}/ai-summary",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "scans",
+                ":scanId",
+                "ai-summary"
+              ],
+              "variable": [
+                {
+                  "key": "scanId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Get just the AI-generated summary/allergy warning for a scan"
+          },
+          "response": []
+        },
+        {
+          "name": "Get safer-alternative recommendations derived from a scan",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/scans/{scanId}/recommendations",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "scans",
+                ":scanId",
+                "recommendations"
+              ],
+              "variable": [
+                {
+                  "key": "scanId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Get safer-alternative recommendations derived from a scan"
+          },
+          "response": []
+        },
+        {
+          "name": "Get AI-generated plain-language consumption guidance for a scan",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/scans/{scanId}/consumption-advice",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "scans",
+                ":scanId",
+                "consumption-advice"
+              ],
+              "variable": [
+                {
+                  "key": "scanId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "E.g. \"safe for occasional consumption\" / \"avoid if pregnant\" \u2014 derived from the scan's flagged ingredients and the user's dietary preferences if set.\n"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "description": "Product CRUD, search, barcode lookup, OCR upload",
+      "item": [
+        {
+          "name": "Search products",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/products",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "string",
+                  "description": "",
+                  "disabled": true
+                },
+                {
+                  "key": "barcode",
+                  "value": "string",
+                  "description": "",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "1-indexed page number (offset-based pagination)",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Items per page (max 100)",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "Search products",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create a product record",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/products",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products"
+              ]
+            },
+            "description": "Create a product record",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"string\",\n  \"brand_name\": \"string\",\n  \"barcode\": \"string\",\n  \"image_url\": \"https://example.com/image.jpg\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get a product by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/products/{productId}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                ":productId"
+              ],
+              "variable": [
+                {
+                  "key": "productId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Get a product by ID",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update a product (owner or admin only)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/products/{productId}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                ":productId"
+              ],
+              "variable": [
+                {
+                  "key": "productId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Update a product (owner or admin only)",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"string\",\n  \"image_url\": \"https://example.com/image.jpg\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete a product (admin only \u2014 products with scan history are protected)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/products/{productId}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                ":productId"
+              ],
+              "variable": [
+                {
+                  "key": "productId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Delete a product (admin only \u2014 products with scan history are protected)"
+          },
+          "response": []
+        },
+        {
+          "name": "[Future] Look up a product by barcode via external database",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/products/barcode/{barcode}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                "barcode",
+                ":barcode"
+              ],
+              "variable": [
+                {
+                  "key": "barcode",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "[Future] Look up a product by barcode via external database",
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[Future] Upload a label image for OCR ingredient extraction",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/products/ocr-upload",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "products",
+                "ocr-upload"
+              ]
+            },
+            "description": "[Future] Upload a label image for OCR ingredient extraction",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": []
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Comparison",
+      "description": "Product-vs-product comparison",
+      "item": [
+        {
+          "name": "List the current user's past comparisons",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/comparisons",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "comparisons"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "1-indexed page number (offset-based pagination)",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Items per page (max 100)",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "List the current user's past comparisons"
+          },
+          "response": []
+        },
+        {
+          "name": "Compare two scans (Product A vs Product B)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/comparisons",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "comparisons"
+              ]
+            },
+            "description": "Compare two scans (Product A vs Product B)",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"scan_a_id\": \"b6f1...\",\n  \"scan_b_id\": \"c7a2...\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get a comparison result (scores, differences, recommendation)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/comparisons/{comparisonId}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "comparisons",
+                ":comparisonId"
+              ],
+              "variable": [
+                {
+                  "key": "comparisonId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Get a comparison result (scores, differences, recommendation)"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete a comparison record",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/comparisons/{comparisonId}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "comparisons",
+                ":comparisonId"
+              ],
+              "variable": [
+                {
+                  "key": "comparisonId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Delete a comparison record"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "History",
+      "description": "Scan history retrieval, deletion, export",
+      "item": [
+        {
+          "name": "Delete a scan from history",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/scans/{scanId}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "scans",
+                ":scanId"
+              ],
+              "variable": [
+                {
+                  "key": "scanId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Delete a scan from history"
+          },
+          "response": []
+        },
+        {
+          "name": "Get the current user's scan history",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/scans",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "scans"
+              ],
+              "query": [
+                {
+                  "key": "risk_level",
+                  "value": "safe",
+                  "description": "",
+                  "disabled": true
+                },
+                {
+                  "key": "from_date",
+                  "value": "2026-07-30",
+                  "description": "",
+                  "disabled": true
+                },
+                {
+                  "key": "to_date",
+                  "value": "2026-07-30",
+                  "description": "",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "1-indexed page number (offset-based pagination)",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Items per page (max 100)",
+                  "disabled": true
+                },
+                {
+                  "key": "cursor",
+                  "value": "string",
+                  "description": "Opaque keyset-pagination cursor (base64 of last-seen sort key), preferred over page/offset for the high-volume `scans` list. When provided, `page` is ignored.\n",
+                  "disabled": true
+                },
+                {
+                  "key": "sort",
+                  "value": "string",
+                  "description": "Field + direction, e.g. `-scanned_at` (desc) or `safety_score` (asc)",
+                  "disabled": true
+                },
+                {
+                  "key": "q",
+                  "value": "string",
+                  "description": "Search past scans by product name",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "Get the current user's scan history"
+          },
+          "response": []
+        },
+        {
+          "name": "Export full scan history",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/scans/export",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "scans",
+                "export"
+              ],
+              "query": [
+                {
+                  "key": "format",
+                  "value": "csv",
+                  "description": "",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "Export full scan history"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Notifications",
+      "description": "In-app notifications",
+      "item": [
+        {
+          "name": "List notifications for the current user",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/notifications",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "notifications"
+              ],
+              "query": [
+                {
+                  "key": "unread_only",
+                  "value": "",
+                  "description": "",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "1-indexed page number (offset-based pagination)",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Items per page (max 100)",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "List notifications for the current user"
+          },
+          "response": []
+        },
+        {
+          "name": "Mark a notification as read",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/notifications/{notificationId}/read",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "notifications",
+                ":notificationId",
+                "read"
+              ],
+              "variable": [
+                {
+                  "key": "notificationId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Mark a notification as read"
+          },
+          "response": []
+        },
+        {
+          "name": "Mark all notifications as read",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/notifications/read-all",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "notifications",
+                "read-all"
+              ]
+            },
+            "description": "Mark all notifications as read"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete a notification",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/notifications/{notificationId}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "notifications",
+                ":notificationId"
+              ],
+              "variable": [
+                {
+                  "key": "notificationId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "Delete a notification"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "AI",
+      "description": "Embeddings, semantic search, knowledge retrieval (agent-facing)",
+      "item": [
+        {
+          "name": "Generate an embedding for arbitrary text (internal/service use)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/ai/embeddings",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ai",
+                "embeddings"
+              ]
+            },
+            "description": "Primarily called by backend jobs (ingredient/product embedding generation), exposed for completeness and for future client-side semantic-search-as-you-type features.\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"text\": \"string\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Semantic (vector) search over the ingredient knowledge base",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/ai/semantic-search",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ai",
+                "semantic-search"
+              ]
+            },
+            "description": "Semantic (vector) search over the ingredient knowledge base",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"string\",\n  \"match_count\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "auth": {
+              "type": "noauth"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Retrieve grounding context for a given ingredient/question (RAG)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/ai/knowledge-retrieval",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ai",
+                "knowledge-retrieval"
+              ]
+            },
+            "description": "Used internally by the analysis pipeline and, in the future, the Voice Assistant \u2014 returns structured knowledge-base facts (risk level, health effects, regulations, allergens) plus the top semantically-similar research sources, for the LLM to ground its response in rather than hallucinate.\n",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"question\": \"string\",\n  \"ingredient_id\": \"00000000-0000-4000-8000-000000000000\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[Future] Submit a transcribed voice question",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/ai/voice-query",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "ai",
+                "voice-query"
+              ]
+            },
+            "description": "[Future] Submit a transcribed voice question",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"transcript\": \"string\",\n  \"scan_id\": \"00000000-0000-4000-8000-000000000000\",\n  \"ingredient_id\": \"00000000-0000-4000-8000-000000000000\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "description": "Admin dashboard, ingredient/user management, analytics (future)",
+      "item": [
+        {
+          "name": "[Future] Get precomputed platform-wide dashboard metrics",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/admin/dashboard/metrics",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "admin",
+                "dashboard",
+                "metrics"
+              ],
+              "query": [
+                {
+                  "key": "from_date",
+                  "value": "2026-07-30",
+                  "description": "",
+                  "disabled": true
+                },
+                {
+                  "key": "to_date",
+                  "value": "2026-07-30",
+                  "description": "",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "[Future] Get precomputed platform-wide dashboard metrics"
+          },
+          "response": []
+        },
+        {
+          "name": "[Future] List/manage ingredients (moderation view)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/admin/ingredients",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "admin",
+                "ingredients"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "1-indexed page number (offset-based pagination)",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Items per page (max 100)",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "[Future] List/manage ingredients (moderation view)"
+          },
+          "response": []
+        },
+        {
+          "name": "[Future] Create a new ingredient knowledge-base entry",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/admin/ingredients",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "admin",
+                "ingredients"
+              ]
+            },
+            "description": "[Future] Create a new ingredient knowledge-base entry",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"string\",\n  \"scientific_name\": \"string\",\n  \"e_number\": \"string\",\n  \"category_id\": \"00000000-0000-4000-8000-000000000000\",\n  \"risk_level\": \"safe\",\n  \"risk_summary\": \"string\",\n  \"description\": \"string\",\n  \"purpose\": \"string\",\n  \"is_natural\": true,\n  \"is_synthetic\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[Future] Update an ingredient knowledge-base entry",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/admin/ingredients/{ingredientId}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "admin",
+                "ingredients",
+                ":ingredientId"
+              ],
+              "variable": [
+                {
+                  "key": "ingredientId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "[Future] Update an ingredient knowledge-base entry",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"string\",\n  \"scientific_name\": \"string\",\n  \"e_number\": \"string\",\n  \"category_id\": \"00000000-0000-4000-8000-000000000000\",\n  \"risk_level\": \"safe\",\n  \"risk_summary\": \"string\",\n  \"description\": \"string\",\n  \"purpose\": \"string\",\n  \"is_natural\": true,\n  \"is_synthetic\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[Future] Soft-delete an ingredient",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/admin/ingredients/{ingredientId}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "admin",
+                "ingredients",
+                ":ingredientId"
+              ],
+              "variable": [
+                {
+                  "key": "ingredientId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "[Future] Soft-delete an ingredient"
+          },
+          "response": []
+        },
+        {
+          "name": "[Future] List/search users",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/admin/users",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "admin",
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "string",
+                  "description": "",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "1-indexed page number (offset-based pagination)",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Items per page (max 100)",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "[Future] List/search users"
+          },
+          "response": []
+        },
+        {
+          "name": "[Future] Grant/revoke an admin/moderator role (super_admin only)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/admin/users/{userId}/role",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "admin",
+                "users",
+                ":userId",
+                "role"
+              ],
+              "variable": [
+                {
+                  "key": "userId",
+                  "value": "00000000-0000-4000-8000-000000000000"
+                }
+              ]
+            },
+            "description": "[Future] Grant/revoke an admin/moderator role (super_admin only)",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"role\": \"user\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "[Future] Query raw analytics events",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/admin/analytics/events",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "admin",
+                "analytics",
+                "events"
+              ],
+              "query": [
+                {
+                  "key": "event_name",
+                  "value": "string",
+                  "description": "",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "1-indexed page number (offset-based pagination)",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Items per page (max 100)",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "[Future] Query raw analytics events"
+          },
+          "response": []
+        },
+        {
+          "name": "[Future] Generate/download a platform report",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/admin/reports",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "admin",
+                "reports"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "scan_volume",
+                  "description": "",
+                  "disabled": true
+                },
+                {
+                  "key": "format",
+                  "value": "csv",
+                  "description": "",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "[Future] Generate/download a platform report"
+          },
+          "response": []
+        },
+        {
+          "name": "[Future] Query the audit log",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/admin/system-logs",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "admin",
+                "system-logs"
+              ],
+              "query": [
+                {
+                  "key": "entity_type",
+                  "value": "string",
+                  "description": "",
+                  "disabled": true
+                },
+                {
+                  "key": "actor_id",
+                  "value": "00000000-0000-4000-8000-000000000000",
+                  "description": "",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "1-indexed page number (offset-based pagination)",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "description": "Items per page (max 100)",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "[Future] Query the audit log"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

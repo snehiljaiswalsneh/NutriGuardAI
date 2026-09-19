@@ -1,0 +1,1572 @@
+openapi: 3.1.0
+info:
+  title: NutriGuard AI API
+  version: "1.0.0"
+  summary: AI-Powered Food Ingredient Safety Analyzer — REST API
+  description: |
+    NutriGuard AI helps users understand food ingredients: detecting harmful
+    substances, explaining health risks, checking country regulations,
+    recommending healthier alternatives, calculating product safety scores,
+    detecting allergens, comparing products, and generating AI summaries.
+
+    ## Versioning
+    All endpoints are prefixed `/api/v1`. See the API Specification Document,
+    §24, for the full deprecation policy.
+
+    ## Authentication
+    Bearer JWT (Supabase Auth). See the `bearerAuth` security scheme below.
+    Public/reference-data endpoints (ingredient lookup, country list) do not
+    require authentication; all personal-data and write endpoints do.
+
+    ## Standard response envelope
+    Every response (success or error) uses the same envelope:
+    ```json
+    { "success": true, "message": "", "data": {}, "meta": {}, "errors": [] }
+    ```
+  license:
+    name: Proprietary
+  contact:
+    name: NutriGuard AI Engineering
+    url: https://nutriguard.ai
+
+servers:
+  - url: https://api.nutriguard.ai/api/v1
+    description: Production
+  - url: https://staging-api.nutriguard.ai/api/v1
+    description: Staging
+  - url: http://localhost:3000/api/v1
+    description: Local development
+
+tags:
+  - name: Authentication
+    description: Registration, login, session, and password management
+  - name: User
+    description: Profile, settings, preferences
+  - name: Ingredients
+    description: Ingredient knowledge base — search, detail, risk, allergens, regulations, alternatives
+  - name: Analysis
+    description: AI-powered ingredient analysis, safety scoring, summaries
+  - name: Products
+    description: Product CRUD, search, barcode lookup, OCR upload
+  - name: Comparison
+    description: Product-vs-product comparison
+  - name: History
+    description: Scan history retrieval, deletion, export
+  - name: Notifications
+    description: In-app notifications
+  - name: AI
+    description: Embeddings, semantic search, knowledge retrieval (agent-facing)
+  - name: Admin
+    description: Admin dashboard, ingredient/user management, analytics (future)
+
+security:
+  - bearerAuth: []
+
+paths:
+  # ============================================================
+  # AUTHENTICATION
+  # ============================================================
+  /auth/register:
+    post:
+      tags: [Authentication]
+      summary: Register a new user
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+            example:
+              full_name: "Alex Morgan"
+              email: "alex@example.com"
+              password: "Str0ngP@ss!"
+      responses:
+        '201':
+          description: Account created, verification email sent
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SuccessEnvelope'
+              example:
+                success: true
+                message: "Account created. Please verify your email."
+                data: { user_id: "8c9e...", email: "alex@example.com" }
+                meta: {}
+                errors: []
+        '409':
+          description: Email already registered
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+        '422':
+          description: Validation error
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /auth/login:
+    post:
+      tags: [Authentication]
+      summary: Log in with email and password
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+            example: { email: "alex@example.com", password: "Str0ngP@ss!" }
+      responses:
+        '200':
+          description: Authenticated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AuthSuccessEnvelope' }
+        '401':
+          description: Invalid credentials
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+        '422':
+          description: Validation error
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /auth/logout:
+    post:
+      tags: [Authentication]
+      summary: Log out and revoke the current refresh token
+      responses:
+        '204':
+          description: Logged out successfully (no content)
+        '401':
+          description: Not authenticated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /auth/refresh-token:
+    post:
+      tags: [Authentication]
+      summary: Exchange a refresh token for a new access token
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [refresh_token]
+              properties:
+                refresh_token: { type: string }
+      responses:
+        '200':
+          description: New access/refresh token pair issued
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AuthSuccessEnvelope' }
+        '401':
+          description: Refresh token invalid or expired
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /auth/forgot-password:
+    post:
+      tags: [Authentication]
+      summary: Request a password-reset email
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email]
+              properties:
+                email: { type: string, format: email }
+      responses:
+        '200':
+          description: |
+            Always returns 200 regardless of whether the email exists,
+            to prevent account enumeration.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /auth/reset-password:
+    post:
+      tags: [Authentication]
+      summary: Reset password using a reset token
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [reset_token, new_password]
+              properties:
+                reset_token: { type: string }
+                new_password: { type: string, minLength: 8 }
+      responses:
+        '200':
+          description: Password updated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '400':
+          description: Reset token invalid or expired
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+        '422':
+          description: Validation error
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /auth/verify-email:
+    post:
+      tags: [Authentication]
+      summary: Verify email using the OTP/token sent at signup
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, otp]
+              properties:
+                email: { type: string, format: email }
+                otp: { type: string, minLength: 6, maxLength: 6 }
+      responses:
+        '200':
+          description: Email verified
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/AuthSuccessEnvelope' }
+        '400':
+          description: OTP invalid or expired
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /auth/session:
+    get:
+      tags: [Authentication]
+      summary: Validate the current session/access token
+      responses:
+        '200':
+          description: Session is valid
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '401':
+          description: Session invalid or expired
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  # ============================================================
+  # USER
+  # ============================================================
+  /users/me:
+    get:
+      tags: [User]
+      summary: Get the current user's profile
+      responses:
+        '200':
+          description: Profile retrieved
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '401':
+          description: Not authenticated
+    patch:
+      tags: [User]
+      summary: Update the current user's profile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                full_name: { type: string, maxLength: 120 }
+                avatar_url: { type: string, format: uri }
+                country_code: { type: string, minLength: 2, maxLength: 2 }
+      responses:
+        '200':
+          description: Profile updated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '422':
+          description: Validation error
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /users/me/settings:
+    get:
+      tags: [User]
+      summary: Get appearance/language/notification/privacy settings
+      responses:
+        '200':
+          description: Settings retrieved
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+    patch:
+      tags: [User]
+      summary: Update settings (theme, language, notification preferences)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                theme: { type: string, enum: [light, dark, system] }
+                language_code: { type: string, example: "en" }
+                notify_scan_complete: { type: boolean }
+                notify_weekly_digest: { type: boolean }
+                notify_new_ban_alert: { type: boolean }
+                marketing_opt_in: { type: boolean }
+                data_sharing_opt_in: { type: boolean }
+      responses:
+        '200':
+          description: Settings updated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /users/me/saved-ingredients:
+    get:
+      tags: [User]
+      summary: List ingredients the user is watching for ban alerts
+      parameters:
+        - $ref: '#/components/parameters/PageParam'
+        - $ref: '#/components/parameters/LimitParam'
+      responses:
+        '200':
+          description: Watchlist retrieved
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+    post:
+      tags: [User]
+      summary: Add an ingredient to the watchlist
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [ingredient_id]
+              properties:
+                ingredient_id: { type: string, format: uuid }
+      responses:
+        '201':
+          description: Ingredient added to watchlist
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /users/me/saved-ingredients/{ingredientId}:
+    delete:
+      tags: [User]
+      summary: Remove an ingredient from the watchlist
+      parameters:
+        - $ref: '#/components/parameters/IngredientIdParam'
+      responses:
+        '204':
+          description: Removed
+        '404':
+          description: Not found in watchlist
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /users/me/account:
+    delete:
+      tags: [User]
+      summary: Permanently delete the current user's account and data
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [confirmation]
+              properties:
+                confirmation: { type: string, description: "Must equal 'DELETE'" }
+      responses:
+        '202':
+          description: Deletion accepted and queued (async data purge)
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '422':
+          description: Confirmation text incorrect
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /users/me/export:
+    get:
+      tags: [User]
+      summary: Export all personal data (GDPR-style data portability)
+      responses:
+        '202':
+          description: Export job queued; a download link will be emailed
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  # ============================================================
+  # INGREDIENTS
+  # ============================================================
+  /ingredients:
+    get:
+      tags: [Ingredients]
+      summary: Search ingredients
+      security: []
+      parameters:
+        - name: q
+          in: query
+          description: Free-text search (name, alias, E-number) — fuzzy + full-text
+          schema: { type: string }
+        - name: risk_level
+          in: query
+          schema: { type: string, enum: [safe, moderate, high, unknown] }
+        - name: category_id
+          in: query
+          schema: { type: string, format: uuid }
+        - $ref: '#/components/parameters/PageParam'
+        - $ref: '#/components/parameters/LimitParam'
+        - $ref: '#/components/parameters/SortParam'
+      responses:
+        '200':
+          description: Matching ingredients
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PaginatedIngredientsEnvelope' }
+
+  /ingredients/{ingredientId}:
+    get:
+      tags: [Ingredients]
+      summary: Get full ingredient detail
+      security: []
+      parameters:
+        - $ref: '#/components/parameters/IngredientIdParam'
+      responses:
+        '200':
+          description: Ingredient detail (description, health effects, regulations, alternatives, sources)
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '404':
+          description: Ingredient not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /ingredients/{ingredientId}/health-effects:
+    get:
+      tags: [Ingredients]
+      summary: Get documented health effects for an ingredient
+      security: []
+      parameters:
+        - $ref: '#/components/parameters/IngredientIdParam'
+      responses:
+        '200':
+          description: Health effects list
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /ingredients/{ingredientId}/regulations:
+    get:
+      tags: [Ingredients]
+      summary: Get per-country regulatory status for an ingredient
+      security: []
+      parameters:
+        - $ref: '#/components/parameters/IngredientIdParam'
+        - name: country_code
+          in: query
+          schema: { type: string, minLength: 2, maxLength: 2 }
+      responses:
+        '200':
+          description: Country regulation list
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /ingredients/{ingredientId}/allergens:
+    get:
+      tags: [Ingredients]
+      summary: Get allergen classifications for an ingredient
+      security: []
+      parameters:
+        - $ref: '#/components/parameters/IngredientIdParam'
+      responses:
+        '200':
+          description: Allergen list
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /ingredients/{ingredientId}/alternatives:
+    get:
+      tags: [Ingredients]
+      summary: Get safer alternative suggestions for an ingredient
+      security: []
+      parameters:
+        - $ref: '#/components/parameters/IngredientIdParam'
+      responses:
+        '200':
+          description: Alternatives list
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /ingredient-categories:
+    get:
+      tags: [Ingredients]
+      summary: List ingredient categories (tree)
+      security: []
+      responses:
+        '200':
+          description: Category tree
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /countries:
+    get:
+      tags: [Ingredients]
+      summary: List reference countries (for regulation lookups/filters)
+      security: []
+      responses:
+        '200':
+          description: Country list
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  # ============================================================
+  # AI ANALYSIS
+  # ============================================================
+  /analysis:
+    post:
+      tags: [Analysis]
+      summary: Analyze a raw ingredient list (creates a scan + product if needed)
+      description: |
+        Kicks off the full AI analysis pipeline: matches ingredients against
+        the knowledge base, computes the safety score, generates the AI
+        summary/allergy warning, and persists a `scan`. This is an
+        asynchronous, job-backed endpoint — poll `GET /scans/{scanId}` or
+        subscribe via Supabase Realtime for completion.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [ingredient_text, input_source]
+              properties:
+                product_name: { type: string, maxLength: 300 }
+                brand_name: { type: string, maxLength: 200 }
+                ingredient_text:
+                  type: string
+                  description: Raw pasted/OCR ingredient list, comma or newline separated
+                  maxLength: 5000
+                input_source:
+                  type: string
+                  enum: [paste, manual, ocr, barcode, voice]
+            example:
+              product_name: "Classic Cured Beef Jerky"
+              brand_name: "TrailSnax"
+              ingredient_text: "Beef, Water, Sodium Nitrite, Citric Acid, Tartrazine (E102)"
+              input_source: "paste"
+      responses:
+        '202':
+          description: Analysis job accepted and queued
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+              example:
+                success: true
+                message: "Analysis started"
+                data: { scan_id: "b6f1...", status: "processing" }
+                meta: {}
+                errors: []
+        '422':
+          description: Validation error (empty/too-long ingredient text)
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+        '429':
+          description: Rate limit exceeded for AI analysis requests
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /scans/{scanId}:
+    get:
+      tags: [Analysis, History]
+      summary: Get full scan result (dashboard payload)
+      parameters:
+        - $ref: '#/components/parameters/ScanIdParam'
+      responses:
+        '200':
+          description: Full scan detail — safety score, AI summary, ingredient breakdown, allergy warning
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '202':
+          description: Scan still processing
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '404':
+          description: Scan not found or not owned by the current user
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+    delete:
+      tags: [History]
+      summary: Delete a scan from history
+      parameters:
+        - $ref: '#/components/parameters/ScanIdParam'
+      responses:
+        '204':
+          description: Deleted
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /scans/{scanId}/safety-score:
+    get:
+      tags: [Analysis]
+      summary: Get just the safety score breakdown for a scan
+      parameters:
+        - $ref: '#/components/parameters/ScanIdParam'
+      responses:
+        '200':
+          description: Safety score
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /scans/{scanId}/ai-summary:
+    get:
+      tags: [Analysis]
+      summary: Get just the AI-generated summary/allergy warning for a scan
+      parameters:
+        - $ref: '#/components/parameters/ScanIdParam'
+      responses:
+        '200':
+          description: AI summary
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /scans/{scanId}/recommendations:
+    get:
+      tags: [Analysis]
+      summary: Get safer-alternative recommendations derived from a scan
+      parameters:
+        - $ref: '#/components/parameters/ScanIdParam'
+      responses:
+        '200':
+          description: Recommendation list
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /scans/{scanId}/consumption-advice:
+    get:
+      tags: [Analysis]
+      summary: Get AI-generated plain-language consumption guidance for a scan
+      description: >
+        E.g. "safe for occasional consumption" / "avoid if pregnant" — derived
+        from the scan's flagged ingredients and the user's dietary preferences
+        if set.
+      parameters:
+        - $ref: '#/components/parameters/ScanIdParam'
+      responses:
+        '200':
+          description: Consumption advice
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  # ============================================================
+  # PRODUCTS
+  # ============================================================
+  /products:
+    get:
+      tags: [Products]
+      summary: Search products
+      security: []
+      parameters:
+        - name: q
+          in: query
+          schema: { type: string }
+        - name: barcode
+          in: query
+          schema: { type: string }
+        - $ref: '#/components/parameters/PageParam'
+        - $ref: '#/components/parameters/LimitParam'
+      responses:
+        '200':
+          description: Matching products
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+    post:
+      tags: [Products]
+      summary: Create a product record
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name]
+              properties:
+                name: { type: string, maxLength: 300 }
+                brand_name: { type: string, maxLength: 200 }
+                barcode: { type: string }
+                image_url: { type: string, format: uri }
+      responses:
+        '201':
+          description: Product created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '409':
+          description: A product with this barcode already exists
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /products/{productId}:
+    get:
+      tags: [Products]
+      summary: Get a product by ID
+      security: []
+      parameters:
+        - $ref: '#/components/parameters/ProductIdParam'
+      responses:
+        '200':
+          description: Product detail
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+    patch:
+      tags: [Products]
+      summary: Update a product (owner or admin only)
+      parameters:
+        - $ref: '#/components/parameters/ProductIdParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name: { type: string, maxLength: 300 }
+                image_url: { type: string, format: uri }
+      responses:
+        '200':
+          description: Product updated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '403':
+          description: Not the product owner and not an admin
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+    delete:
+      tags: [Products]
+      summary: Delete a product (admin only — products with scan history are protected)
+      parameters:
+        - $ref: '#/components/parameters/ProductIdParam'
+      responses:
+        '204':
+          description: Deleted
+        '409':
+          description: Product has associated scan history and cannot be deleted
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /products/barcode/{barcode}:
+    get:
+      tags: [Products]
+      summary: "[Future] Look up a product by barcode via external database"
+      security: []
+      parameters:
+        - name: barcode
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Product found (local cache or external provider)
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '404':
+          description: No product found for this barcode
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+        '501':
+          description: Feature not yet enabled
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /products/ocr-upload:
+    post:
+      tags: [Products]
+      summary: "[Future] Upload a label image for OCR ingredient extraction"
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [image]
+              properties:
+                image:
+                  type: string
+                  format: binary
+                  description: JPEG/PNG/WEBP, max 8MB
+      responses:
+        '202':
+          description: OCR job accepted; poll the returned scan_id
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '413':
+          description: File too large
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+        '415':
+          description: Unsupported file type
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+        '501':
+          description: Feature not yet enabled
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  # ============================================================
+  # COMPARISON
+  # ============================================================
+  /comparisons:
+    get:
+      tags: [Comparison]
+      summary: List the current user's past comparisons
+      parameters:
+        - $ref: '#/components/parameters/PageParam'
+        - $ref: '#/components/parameters/LimitParam'
+      responses:
+        '200':
+          description: Comparison list
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+    post:
+      tags: [Comparison]
+      summary: Compare two scans (Product A vs Product B)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [scan_a_id, scan_b_id]
+              properties:
+                scan_a_id: { type: string, format: uuid }
+                scan_b_id: { type: string, format: uuid }
+            example: { scan_a_id: "b6f1...", scan_b_id: "c7a2..." }
+      responses:
+        '201':
+          description: Comparison created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+              example:
+                success: true
+                message: "Comparison created"
+                data:
+                  comparison_id: "d8e3..."
+                  winner: "product_b"
+                  recommendation_text: "Product B is the safer choice — it scores 27 points higher with fewer flagged ingredients."
+                meta: {}
+                errors: []
+        '422':
+          description: Both scan IDs must be distinct and owned by the current user
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /comparisons/{comparisonId}:
+    get:
+      tags: [Comparison]
+      summary: Get a comparison result (scores, differences, recommendation)
+      parameters:
+        - name: comparisonId
+          in: path
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        '200':
+          description: Comparison detail
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+    delete:
+      tags: [Comparison]
+      summary: Delete a comparison record
+      parameters:
+        - name: comparisonId
+          in: path
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        '204':
+          description: Deleted
+
+  # ============================================================
+  # HISTORY
+  # ============================================================
+  /scans:
+    get:
+      tags: [History]
+      summary: Get the current user's scan history
+      parameters:
+        - name: risk_level
+          in: query
+          schema: { type: string, enum: [safe, moderate, high, unknown] }
+        - name: from_date
+          in: query
+          schema: { type: string, format: date }
+        - name: to_date
+          in: query
+          schema: { type: string, format: date }
+        - $ref: '#/components/parameters/PageParam'
+        - $ref: '#/components/parameters/LimitParam'
+        - $ref: '#/components/parameters/CursorParam'
+        - $ref: '#/components/parameters/SortParam'
+        - name: q
+          in: query
+          description: Search past scans by product name
+          schema: { type: string }
+      responses:
+        '200':
+          description: Paginated scan history
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/PaginatedScansEnvelope' }
+
+  /scans/export:
+    get:
+      tags: [History]
+      summary: Export full scan history
+      parameters:
+        - name: format
+          in: query
+          schema: { type: string, enum: [csv, json, pdf], default: csv }
+      responses:
+        '202':
+          description: Export job queued; a download link will be emailed / returned via webhook
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  # ============================================================
+  # NOTIFICATIONS
+  # ============================================================
+  /notifications:
+    get:
+      tags: [Notifications]
+      summary: List notifications for the current user
+      parameters:
+        - name: unread_only
+          in: query
+          schema: { type: boolean, default: false }
+        - $ref: '#/components/parameters/PageParam'
+        - $ref: '#/components/parameters/LimitParam'
+      responses:
+        '200':
+          description: Notification list
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /notifications/{notificationId}/read:
+    patch:
+      tags: [Notifications]
+      summary: Mark a notification as read
+      parameters:
+        - name: notificationId
+          in: path
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        '200':
+          description: Marked as read
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /notifications/read-all:
+    patch:
+      tags: [Notifications]
+      summary: Mark all notifications as read
+      responses:
+        '200':
+          description: All marked as read
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /notifications/{notificationId}:
+    delete:
+      tags: [Notifications]
+      summary: Delete a notification
+      parameters:
+        - name: notificationId
+          in: path
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        '204':
+          description: Deleted
+
+  # ============================================================
+  # AI (agent-facing: embeddings, semantic search, knowledge retrieval)
+  # ============================================================
+  /ai/embeddings:
+    post:
+      tags: [AI]
+      summary: Generate an embedding for arbitrary text (internal/service use)
+      description: >
+        Primarily called by backend jobs (ingredient/product embedding
+        generation), exposed for completeness and for future client-side
+        semantic-search-as-you-type features.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [text]
+              properties:
+                text: { type: string, maxLength: 8000 }
+      responses:
+        '200':
+          description: Embedding vector generated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '429':
+          description: Embedding-provider rate limit exceeded
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /ai/semantic-search:
+    post:
+      tags: [AI]
+      summary: Semantic (vector) search over the ingredient knowledge base
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [query]
+              properties:
+                query:
+                  type: string
+                  description: Natural-language query, e.g. "what should I avoid if I'm sensitive to sulfites"
+                match_count: { type: integer, default: 10, minimum: 1, maximum: 50 }
+      responses:
+        '200':
+          description: Ranked ingredient matches with similarity scores
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /ai/knowledge-retrieval:
+    post:
+      tags: [AI]
+      summary: Retrieve grounding context for a given ingredient/question (RAG)
+      description: >
+        Used internally by the analysis pipeline and, in the future, the
+        Voice Assistant — returns structured knowledge-base facts (risk
+        level, health effects, regulations, allergens) plus the top
+        semantically-similar research sources, for the LLM to ground its
+        response in rather than hallucinate.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [question]
+              properties:
+                question: { type: string }
+                ingredient_id: { type: string, format: uuid }
+      responses:
+        '200':
+          description: Grounding context payload
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /ai/voice-query:
+    post:
+      tags: [AI]
+      summary: "[Future] Submit a transcribed voice question"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [transcript]
+              properties:
+                transcript: { type: string }
+                scan_id: { type: string, format: uuid }
+                ingredient_id: { type: string, format: uuid }
+      responses:
+        '200':
+          description: AI response generated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '501':
+          description: Feature not yet enabled
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  # ============================================================
+  # ADMIN (Future) — all endpoints require role: admin or super_admin
+  # ============================================================
+  /admin/dashboard/metrics:
+    get:
+      tags: [Admin]
+      summary: "[Future] Get precomputed platform-wide dashboard metrics"
+      security:
+        - bearerAuth: [admin]
+      parameters:
+        - name: from_date
+          in: query
+          schema: { type: string, format: date }
+        - name: to_date
+          in: query
+          schema: { type: string, format: date }
+      responses:
+        '200':
+          description: Daily metrics (scan volume, active users, avg safety score, high-risk scans)
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '403':
+          description: Admin role required
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /admin/ingredients:
+    get:
+      tags: [Admin]
+      summary: "[Future] List/manage ingredients (moderation view)"
+      security:
+        - bearerAuth: [admin]
+      parameters:
+        - $ref: '#/components/parameters/PageParam'
+        - $ref: '#/components/parameters/LimitParam'
+      responses:
+        '200':
+          description: Ingredient list (admin view, includes soft-deleted)
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+    post:
+      tags: [Admin]
+      summary: "[Future] Create a new ingredient knowledge-base entry"
+      security:
+        - bearerAuth: [admin]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IngredientAdminWriteRequest'
+      responses:
+        '201':
+          description: Ingredient created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /admin/ingredients/{ingredientId}:
+    patch:
+      tags: [Admin]
+      summary: "[Future] Update an ingredient knowledge-base entry"
+      security:
+        - bearerAuth: [admin]
+      parameters:
+        - $ref: '#/components/parameters/IngredientIdParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IngredientAdminWriteRequest'
+      responses:
+        '200':
+          description: Ingredient updated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+    delete:
+      tags: [Admin]
+      summary: "[Future] Soft-delete an ingredient"
+      security:
+        - bearerAuth: [admin]
+      parameters:
+        - $ref: '#/components/parameters/IngredientIdParam'
+      responses:
+        '204':
+          description: Soft-deleted
+
+  /admin/users:
+    get:
+      tags: [Admin]
+      summary: "[Future] List/search users"
+      security:
+        - bearerAuth: [admin]
+      parameters:
+        - name: q
+          in: query
+          schema: { type: string }
+        - $ref: '#/components/parameters/PageParam'
+        - $ref: '#/components/parameters/LimitParam'
+      responses:
+        '200':
+          description: User list
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /admin/users/{userId}/role:
+    patch:
+      tags: [Admin]
+      summary: "[Future] Grant/revoke an admin/moderator role (super_admin only)"
+      security:
+        - bearerAuth: [super_admin]
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema: { type: string, format: uuid }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [role]
+              properties:
+                role: { type: string, enum: [user, moderator, admin, super_admin] }
+      responses:
+        '200':
+          description: Role updated
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+        '403':
+          description: super_admin role required
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ErrorEnvelope' }
+
+  /admin/analytics/events:
+    get:
+      tags: [Admin]
+      summary: "[Future] Query raw analytics events"
+      security:
+        - bearerAuth: [admin]
+      parameters:
+        - name: event_name
+          in: query
+          schema: { type: string }
+        - $ref: '#/components/parameters/PageParam'
+        - $ref: '#/components/parameters/LimitParam'
+      responses:
+        '200':
+          description: Analytics event list
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /admin/reports:
+    get:
+      tags: [Admin]
+      summary: "[Future] Generate/download a platform report"
+      security:
+        - bearerAuth: [admin]
+      parameters:
+        - name: type
+          in: query
+          schema: { type: string, enum: [scan_volume, risk_distribution, user_growth] }
+        - name: format
+          in: query
+          schema: { type: string, enum: [csv, pdf], default: csv }
+      responses:
+        '202':
+          description: Report generation queued
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+  /admin/system-logs:
+    get:
+      tags: [Admin]
+      summary: "[Future] Query the audit log"
+      security:
+        - bearerAuth: [admin]
+      parameters:
+        - name: entity_type
+          in: query
+          schema: { type: string }
+        - name: actor_id
+          in: query
+          schema: { type: string, format: uuid }
+        - $ref: '#/components/parameters/PageParam'
+        - $ref: '#/components/parameters/LimitParam'
+      responses:
+        '200':
+          description: Audit log entries
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/SuccessEnvelope' }
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: >
+        Supabase Auth JWT access token, obtained from /auth/login or
+        /auth/refresh-token. Send as `Authorization: Bearer <token>`.
+        Scopes (admin, super_admin) are enforced via the `role` claim /
+        the `admin_roles` table, not via OAuth scopes.
+
+  parameters:
+    PageParam:
+      name: page
+      in: query
+      description: 1-indexed page number (offset-based pagination)
+      schema: { type: integer, minimum: 1, default: 1 }
+    LimitParam:
+      name: limit
+      in: query
+      description: Items per page (max 100)
+      schema: { type: integer, minimum: 1, maximum: 100, default: 20 }
+    CursorParam:
+      name: cursor
+      in: query
+      description: >
+        Opaque keyset-pagination cursor (base64 of last-seen sort key),
+        preferred over page/offset for the high-volume `scans` list.
+        When provided, `page` is ignored.
+      schema: { type: string }
+    SortParam:
+      name: sort
+      in: query
+      description: "Field + direction, e.g. `-scanned_at` (desc) or `safety_score` (asc)"
+      schema: { type: string }
+    IngredientIdParam:
+      name: ingredientId
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+    ProductIdParam:
+      name: productId
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+    ScanIdParam:
+      name: scanId
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+
+  schemas:
+    SuccessEnvelope:
+      type: object
+      properties:
+        success: { type: boolean, example: true }
+        message: { type: string }
+        data: { type: object }
+        meta: { type: object }
+        errors: { type: array, items: {}, example: [] }
+      required: [success, message, data, meta, errors]
+
+    AuthSuccessEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/SuccessEnvelope'
+        - type: object
+          properties:
+            data:
+              type: object
+              properties:
+                access_token: { type: string }
+                refresh_token: { type: string }
+                expires_in: { type: integer, example: 3600 }
+                user:
+                  type: object
+                  properties:
+                    id: { type: string, format: uuid }
+                    email: { type: string, format: email }
+                    full_name: { type: string }
+                    role: { type: string, enum: [user, moderator, admin, super_admin] }
+
+    ErrorEnvelope:
+      type: object
+      properties:
+        success: { type: boolean, example: false }
+        message: { type: string, example: "Validation failed" }
+        data: { type: object, example: {} }
+        meta: { type: object, example: {} }
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorDetail'
+      required: [success, message, data, meta, errors]
+
+    ErrorDetail:
+      type: object
+      properties:
+        code: { type: string, example: "VALIDATION_ERROR" }
+        field: { type: string, example: "email" }
+        message: { type: string, example: "must be a valid email address" }
+
+    PaginationMeta:
+      type: object
+      properties:
+        page: { type: integer, example: 1 }
+        limit: { type: integer, example: 20 }
+        total_items: { type: integer, example: 143 }
+        total_pages: { type: integer, example: 8 }
+        next_cursor: { type: string, nullable: true }
+
+    RegisterRequest:
+      type: object
+      required: [full_name, email, password]
+      properties:
+        full_name: { type: string, minLength: 1, maxLength: 120 }
+        email: { type: string, format: email }
+        password:
+          type: string
+          minLength: 8
+          description: "Min 8 chars, at least 1 uppercase, 1 lowercase, 1 number"
+
+    LoginRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email: { type: string, format: email }
+        password: { type: string }
+
+    Ingredient:
+      type: object
+      properties:
+        id: { type: string, format: uuid }
+        name: { type: string }
+        scientific_name: { type: string, nullable: true }
+        e_number: { type: string, nullable: true }
+        risk_level: { type: string, enum: [safe, moderate, high, unknown] }
+        risk_summary: { type: string }
+        description: { type: string }
+        purpose: { type: string }
+
+    PaginatedIngredientsEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/SuccessEnvelope'
+        - type: object
+          properties:
+            data:
+              type: array
+              items: { $ref: '#/components/schemas/Ingredient' }
+            meta: { $ref: '#/components/schemas/PaginationMeta' }
+
+    ScanSummary:
+      type: object
+      properties:
+        scan_id: { type: string, format: uuid }
+        product_name: { type: string }
+        brand_name: { type: string, nullable: true }
+        safety_score: { type: integer, minimum: 0, maximum: 100 }
+        verdict: { type: string, enum: [safe, moderate, high, unknown] }
+        scanned_at: { type: string, format: date-time }
+
+    PaginatedScansEnvelope:
+      allOf:
+        - $ref: '#/components/schemas/SuccessEnvelope'
+        - type: object
+          properties:
+            data:
+              type: array
+              items: { $ref: '#/components/schemas/ScanSummary' }
+            meta: { $ref: '#/components/schemas/PaginationMeta' }
+
+    IngredientAdminWriteRequest:
+      type: object
+      required: [name, risk_level]
+      properties:
+        name: { type: string, maxLength: 200 }
+        scientific_name: { type: string }
+        e_number: { type: string }
+        category_id: { type: string, format: uuid }
+        risk_level: { type: string, enum: [safe, moderate, high, unknown] }
+        risk_summary: { type: string }
+        description: { type: string }
+        purpose: { type: string }
+        is_natural: { type: boolean }
+        is_synthetic: { type: boolean }
