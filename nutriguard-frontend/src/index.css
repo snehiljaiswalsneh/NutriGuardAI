@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-white text-neutral-900 antialiased;
+  font-family: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: -0.015em;
+}
+
+html.dark,
+html.dark body {
+  @apply bg-darkbg text-neutral-100;
+}
+
+:root {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+
+/* Visible keyboard focus ring app-wide */
+:focus-visible {
+  outline: 2px solid #0e9f6e;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(243, 244, 246, 1) 0%,
+    rgba(229, 231, 235, 1) 50%,
+    rgba(243, 244, 246, 1) 100%
+  );
+  background-size: 800px 100%;
+}
+
+.glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.dark .glass {
+  background-color: rgba(22, 28, 44, 0.75);
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.bg-radial-gradient {
+  background-image: radial-gradient(circle at 50% 0%, rgba(14, 159, 110, 0.15) 0%, rgba(14, 159, 110, 0.02) 60%, transparent 100%);
+}
+
+.dark .bg-radial-gradient {
+  background-image: radial-gradient(circle at 50% 0%, rgba(14, 159, 110, 0.18) 0%, rgba(11, 17, 32, 0.02) 60%, transparent 100%);
+}
+
