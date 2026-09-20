@@ -1,9 +1,14 @@
 /**
  * Vercel serverless entry point.
  *
- * Vercel's Node.js runtime calls the default-exported function with each
- * incoming request (as a Web API `Request`) and expects a `Response` back.
- * Hono's `app.fetch` satisfies that contract exactly.
+ * Vercel's Node.js Serverless Function runtime calls the default export
+ * with Node's (req, res) signature: `(http.IncomingMessage, http.ServerResponse)`.
+ *
+ * We use Hono's official Vercel Node adapter: `handle` from `@hono/node-server/vercel`.
+ * It transforms incoming Node HTTP requests and raw headers into a standard Web API
+ * `Request` (ensuring `c.req.header()` and `this.raw.headers.get` succeed), passes it
+ * to Hono's `app.fetch`, and writes the resulting Web API `Response` back to Node's
+ * `ServerResponse` with `res.end()`.
  *
  * The app is instantiated once at module level so it is reused across
  * warm invocations — middleware chains, route registrations, and compiled
@@ -15,8 +20,15 @@
  *
  * Local development still uses `src/server.ts` → `npm run dev` is unchanged.
  */
+import { handle } from '@hono/node-server/vercel';
 import { createApp } from '../dist/src/app.js';
+
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
 
 const app = createApp();
 
-export default app.fetch;
+export default handle(app);
