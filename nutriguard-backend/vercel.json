@@ -3,12 +3,6 @@
   "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "functions": {
-    "api/index.ts": {
-      "runtime": "nodejs22.x",
-      "maxDuration": 30
-    }
-  },
   "rewrites": [
     { "source": "/(.*)", "destination": "/api/index.ts" }
   ]
