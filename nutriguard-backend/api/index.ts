@@ -9,9 +9,13 @@
  * warm invocations — middleware chains, route registrations, and compiled
  * Zod schemas are all built only once per cold start.
  *
+ * Imports the pre-built, alias-resolved application from `dist/` so that
+ * TypeScript path aliases (@shared/*, @modules/*, etc.) resolved by
+ * `tsc-alias` during `npm run build` are used in production on Vercel.
+ *
  * Local development still uses `src/server.ts` → `npm run dev` is unchanged.
  */
-import { createApp } from '../src/app.js';
+import { createApp } from '../dist/src/app.js';
 
 const app = createApp();
 

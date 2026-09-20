@@ -21,7 +21,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "declaration": false,
+    "declaration": true,
     "sourceMap": true,
 
     "ignoreDeprecations": "5.0",
@@ -35,6 +35,6 @@
       "@ai/*": ["src/ai/*"]
     }
   },
-  "include": ["api/**/*.ts", "src/**/*.ts", "tests/**/*.ts"],
+  "include": ["src/**/*.ts", "tests/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
