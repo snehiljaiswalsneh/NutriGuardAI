@@ -2,9 +2,9 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
+  "outputDirectory": ".",
   "functions": {
-    "api/index.ts": {
+    "api/*.ts": {
       "includeFiles": "dist/**"
     }
   },
