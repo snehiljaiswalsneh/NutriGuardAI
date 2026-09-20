@@ -1,0 +1,5540 @@
+[
+  {
+    "id": "scan-1789793970966",
+    "productName": "Red Bull Energy Drinks",
+    "brand": "Home/Custom",
+    "scanDate": "2026-09-19",
+    "safetyScore": 62,
+    "verdict": "Moderate Risk",
+    "aiSummary": "Red Bull Energy Drink delivers a quick boost of energy primarily through caffeine, taurine, and high amounts of simple sugars (sucrose and glucose). While fortified with B-complex vitamins, regular or high consumption presents moderate health risks including rapid blood sugar spikes, energy crashes, and potential cardiovascular or sleep disturbances from stimulant content.",
+    "allergyWarning": null,
+    "ingredients": [
+      {
+        "id": "carbonated-water",
+        "name": "Carbonated Water",
+        "scientificName": "Water infused with Carbon Dioxide (CO2)",
+        "risk": "safe",
+        "reason": "Purified water infused with carbon dioxide gas to create effervescence.",
+        "purpose": "Beverage base and carbonation",
+        "description": "Effervescent water that forms the liquid matrix of the drink.",
+        "healthEffects": [
+          "Hydration"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "sucrose",
+        "name": "Sucrose",
+        "scientificName": "Alpha-D-glucopyranosyl-(1->2)-beta-D-fructofuranoside",
+        "risk": "moderate",
+        "reason": "Refined disaccharide sweetener that rapidly elevates blood glucose levels.",
+        "purpose": "Primary Sweetener",
+        "description": "Common table sugar extracted from sugar cane or sugar beets.",
+        "healthEffects": [
+          "Blood Sugar Spikes",
+          "Dental Caries",
+          "Increased Risk of Obesity"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "stevia-extract",
+            "name": "Stevia Leaf Extract",
+            "scoreDelta": 15,
+            "reason": "Provides sweetness without adding simple carbohydrates or elevating blood sugar."
+          }
+        ]
+      },
+      {
+        "id": "glucose",
+        "name": "Glucose",
+        "scientificName": "D-Glucose",
+        "risk": "moderate",
+        "reason": "High-glycemic simple monosaccharide causing immediate glycemic response.",
+        "purpose": "Secondary Sweetener / Quick Energy Source",
+        "description": "Simple sugar absorbed directly into the bloodstream for rapid carbohydrate fuel.",
+        "healthEffects": [
+          "Rapid Glycemic Spike",
+          "Insulin Response"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "monk-fruit-extract",
+            "name": "Monk Fruit Extract",
+            "scoreDelta": 15,
+            "reason": "Zero-calorie natural sweetener that prevents blood sugar volatility."
+          }
+        ]
+      },
+      {
+        "id": "citric-acid",
+        "name": "Citric Acid",
+        "scientificName": "2-hydroxypropane-1,2,3-tricarboxylic acid",
+        "risk": "safe",
+        "reason": "Naturally derived weak organic acid used for flavor balance and preservation.",
+        "purpose": "Acidulant and Flavor Enhancer",
+        "description": "Provides a tart, refreshing taste profile while helping to preserve freshness.",
+        "healthEffects": [
+          "Mild Tooth Enamel Erosion (at high acidity)"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "taurine",
+        "name": "Taurine",
+        "scientificName": "2-aminoethanesulfonic acid",
+        "risk": "safe",
+        "reason": "Naturally occurring amino sulfonic acid involved in neurological and cardiovascular function.",
+        "purpose": "Functional Supplement / Osmolyte",
+        "description": "An amino acid derivative naturally present in muscle meats and human tissue.",
+        "healthEffects": [
+          "Supports Electrolyte Balance",
+          "Mild Antioxidant Properties"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "caffeine",
+        "name": "Caffeine",
+        "scientificName": "1,3,7-Trimethylxanthine",
+        "risk": "moderate",
+        "reason": "Central nervous system stimulant that can induce restlessness, elevated heart rate, and sleep disruption.",
+        "purpose": "Stimulant / Cognitive Alertness Agent",
+        "description": "A naturally derived or synthetic alkaloid that blocks adenosine receptors in the brain to reduce tiredness.",
+        "healthEffects": [
+          "Increased Alertness",
+          "Elevated Heart Rate",
+          "Insomnia",
+          "Jitteriness"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "green-tea-extract",
+            "name": "Organic Green Tea Caffeine",
+            "scoreDelta": 10,
+            "reason": "Contains L-theanine alongside caffeine to promote smoother, sustained energy without sharp jitters."
+          }
+        ]
+      },
+      {
+        "id": "artificial-flavors-and-colors",
+        "name": "Natural and Artificial Flavors, Colors",
+        "scientificName": null,
+        "risk": "moderate",
+        "reason": "Synthetic flavor compounds and food dyes may cause mild allergic or hypersensitivity reactions in sensitive individuals.",
+        "purpose": "Flavoring and Visual Appearance",
+        "description": "Proprietary flavor blend and color additives used to standardize product taste and signature amber appearance.",
+        "healthEffects": [
+          "Potential Hypersensitivity",
+          "Food Intolerances"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Restricted"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "natural-fruit-extracts",
+            "name": "100% Natural Fruit Juices and Plant Extracts",
+            "scoreDelta": 12,
+            "reason": "Eliminates synthetic food colorings and artificial flavor chemicals."
+          }
+        ]
+      }
+    ],
+    "nutritionProfile": {
+      "calories": 110,
+      "servingSize": "1 can (250 ml)",
+      "macros": [
+        {
+          "name": "Protein",
+          "amount": "0",
+          "unit": "g",
+          "dailyValue": 0
+        },
+        {
+          "name": "Total Fat",
+          "amount": "0",
+          "unit": "g",
+          "dailyValue": 0
+        },
+        {
+          "name": "Saturated Fat",
+          "amount": "0",
+          "unit": "g",
+          "dailyValue": 0
+        },
+        {
+          "name": "Total Carbohydrates",
+          "amount": "28",
+          "unit": "g",
+          "dailyValue": 10
+        },
+        {
+          "name": "Dietary Fiber",
+          "amount": "0",
+          "unit": "g",
+          "dailyValue": 0
+        },
+        {
+          "name": "Total Sugars",
+          "amount": "27",
+          "unit": "g",
+          "dailyValue": 54,
+          "badFor": [
+            "Diabetes",
+            "Weight Gain",
+            "Dental Caries"
+          ]
+        },
+        {
+          "name": "Sodium",
+          "amount": "105",
+          "unit": "mg",
+          "dailyValue": 5
+        }
+      ],
+      "vitamins": [
+        {
+          "name": "Niacin",
+          "amount": "20",
+          "unit": "mg",
+          "dailyValue": 125
+        },
+        {
+          "name": "Vitamin B6",
+          "amount": "5",
+          "unit": "mg",
+          "dailyValue": 294
+        },
+        {
+          "name": "Vitamin B12",
+          "amount": "5",
+          "unit": "mcg",
+          "dailyValue": 208
+        }
+      ],
+      "minerals": [
+        {
+          "name": "Magnesium",
+          "amount": "24",
+          "unit": "mg",
+          "dailyValue": 6,
+          "benefitLabel": "Electrolyte Balance"
+        },
+        {
+          "name": "Calcium",
+          "amount": "0",
+          "unit": "mg",
+          "dailyValue": 0
+        },
+        {
+          "name": "Potassium",
+          "amount": "0",
+          "unit": "mg",
+          "dailyValue": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "scan-1789793845521",
+    "productName": "Monster Energy Drink",
+    "brand": "Home/Custom",
+    "scanDate": "2026-09-19",
+    "safetyScore": 87,
+    "verdict": "Safe",
+    "aiSummary": "Monster Energy Drink contains 21 analyzed ingredients. 1 ingredient(s) carry moderate or elevated health considerations.",
+    "allergyWarning": null,
+    "ingredients": [
+      {
+        "id": "ing-0-carbonated-water",
+        "name": "Carbonated Water",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Carbonated Water used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "alt-fallback-1-1789793850195",
+            "name": "Cold-Pressed Olive Oil & Natural Spiced Monster Energy Drink",
+            "scoreDelta": 9,
+            "reason": "Retains 100% identical core ingredients (Monster Energy Drink), replacing refined cooking oils with cold-pressed olive oil & whole spices."
+          },
+          {
+            "id": "alt-fallback-2-1789793850196",
+            "name": "Low-Sodium Himalayan Pink Salt Monster Energy Drink",
+            "scoreDelta": 10,
+            "reason": "Preserves identical core (Monster Energy Drink) while swapping commercial table salts with mineral-rich pink salt."
+          },
+          {
+            "id": "alt-fallback-3-1789793850196",
+            "name": "Probiotic-Marinated Slow-Dum Clean Monster Energy Drink",
+            "scoreDelta": 11,
+            "reason": "Uses identical Monster Energy Drink marinated in organic probiotic yogurt with zero chemical tenderizers or artificial colors."
+          }
+        ]
+      },
+      {
+        "id": "ing-1-sugar",
+        "name": "Sugar",
+        "scientificName": null,
+        "risk": "moderate",
+        "reason": "Added sugar with high glycemic impact",
+        "purpose": "Sweetener and flavor enhancer",
+        "description": "Sugar used in Monster Energy Drink.",
+        "healthEffects": [
+          "Added sugar with high glycemic impact"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-2-glucose",
+        "name": "Glucose",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Glucose used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-3-citric-acid",
+        "name": "Citric Acid",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Citric Acid used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-4-natural-flavors",
+        "name": "Natural Flavors",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Natural Flavors used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-5-taurine",
+        "name": "Taurine",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Taurine used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-6-sodium-citrate",
+        "name": "Sodium Citrate",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Sodium Citrate used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-7-color-added",
+        "name": "Color Added",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Color Added used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-8-panax-ginseng-extract",
+        "name": "Panax Ginseng Extract",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Panax Ginseng Extract used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-9-l-carnitine-l-tartrate",
+        "name": "L-Carnitine L-Tartrate",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "L-Carnitine L-Tartrate used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-10-caffeine",
+        "name": "Caffeine",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Caffeine used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-11-sorbic-acid",
+        "name": "Sorbic Acid",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Sorbic Acid used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-12-benzoic-acid",
+        "name": "Benzoic Acid",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Benzoic Acid used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-13-niacinamide",
+        "name": "Niacinamide",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Niacinamide used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-14-sucralose",
+        "name": "Sucralose",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Sucralose used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-15-pyrdoxine-hydrochloride",
+        "name": "Pyrdoxine Hydrochloride",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Pyrdoxine Hydrochloride used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-16-riboflavin",
+        "name": "Riboflavin",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Riboflavin used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-17-cyanocobalamin",
+        "name": "Cyanocobalamin",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Cyanocobalamin used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-18-salt",
+        "name": "Salt",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Salt used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-19-inositol",
+        "name": "Inositol",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Inositol used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-20-guarana-seed-extract",
+        "name": "Guarana Seed Extract",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Guarana Seed Extract used in Monster Energy Drink.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      }
+    ]
+  },
+  {
+    "id": "scan-1789661913369",
+    "productName": "NutroVally Super Seeds Combo",
+    "brand": "Home/Custom",
+    "scanDate": "2026-09-17",
+    "safetyScore": 85,
+    "verdict": "Safe",
+    "aiSummary": "NutroVally Super Seeds Combo contains 19 analyzed ingredients. 2 ingredient(s) carry moderate or elevated health considerations.",
+    "allergyWarning": null,
+    "ingredients": [
+      {
+        "id": "ing-0-methylcobalamin",
+        "name": "Methylcobalamin",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Methylcobalamin used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "alt-fallback-1-1789661915611",
+            "name": "Cold-Pressed Olive Oil & Natural Spiced NutroVally Super Seeds Combo",
+            "scoreDelta": 12,
+            "reason": "Retains 100% identical core ingredients (NutroVally Super Seeds Combo), replacing refined cooking oils with cold-pressed olive oil & whole spices."
+          },
+          {
+            "id": "alt-fallback-2-1789661915611",
+            "name": "Low-Sodium Himalayan Pink Salt NutroVally Super Seeds Combo",
+            "scoreDelta": 15,
+            "reason": "Preserves identical core (NutroVally Super Seeds Combo) while swapping commercial table salts with mineral-rich pink salt."
+          },
+          {
+            "id": "alt-fallback-3-1789661915611",
+            "name": "Probiotic-Marinated Slow-Dum Clean NutroVally Super Seeds Combo",
+            "scoreDelta": 18,
+            "reason": "Uses identical NutroVally Super Seeds Combo marinated in organic probiotic yogurt with zero chemical tenderizers or artificial colors."
+          }
+        ]
+      },
+      {
+        "id": "ing-1-cholecalciferol",
+        "name": "Cholecalciferol",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Cholecalciferol used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-2-d-biotin",
+        "name": "D-Biotin",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "D-Biotin used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-3-ascorbic-acid",
+        "name": "Ascorbic Acid",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Ascorbic Acid used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-4-nicotinamide",
+        "name": "Nicotinamide",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Nicotinamide used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-5-tocopheryl-acetate",
+        "name": "Tocopheryl Acetate",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Tocopheryl Acetate used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-6-calcium-d-pantothenate",
+        "name": "Calcium D-Pantothenate",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Calcium D-Pantothenate used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-7-riboflavin",
+        "name": "Riboflavin",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Riboflavin used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-8-thiamine-mononitrate",
+        "name": "Thiamine Mononitrate",
+        "scientificName": null,
+        "risk": "high",
+        "reason": "Synthetic preservative flagged by health agencies",
+        "purpose": "Extends shelf life",
+        "description": "Thiamine Mononitrate used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Synthetic preservative flagged by health agencies"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Restricted"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-9-folic-acid",
+        "name": "Folic Acid",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Folic Acid used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-10-pyridoxine-hydrochloride",
+        "name": "Pyridoxine Hydrochloride",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Pyridoxine Hydrochloride used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-11-magnesium-oxide-light",
+        "name": "Magnesium Oxide Light",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Magnesium Oxide Light used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-12-zinc-sulphate",
+        "name": "Zinc Sulphate",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Zinc Sulphate used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-13-copper-sulphate",
+        "name": "Copper Sulphate",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Copper Sulphate used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-14-chromium-picolinate",
+        "name": "Chromium Picolinate",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Chromium Picolinate used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-15-sodium-selenite",
+        "name": "Sodium Selenite",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Sodium Selenite used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-16-sodium-molybdate",
+        "name": "Sodium Molybdate",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Sodium Molybdate used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-17-manganese-sulphate",
+        "name": "Manganese Sulphate",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Manganese Sulphate used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-18-l-glutamic-acid",
+        "name": "L-Glutamic Acid",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "L-Glutamic Acid used in NutroVally Super Seeds Combo.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      }
+    ]
+  },
+  {
+    "id": "scan-1789661693493",
+    "productName": "yoga chocolate oats",
+    "brand": "Home/Custom",
+    "scanDate": "2026-09-17",
+    "safetyScore": 82,
+    "verdict": "Safe",
+    "aiSummary": "yoga chocolate oats contains 13 analyzed ingredients. 3 ingredient(s) carry moderate or elevated health considerations.",
+    "allergyWarning": "Contains Milk (Dairy), Tree Nuts/Peanuts.",
+    "ingredients": [
+      {
+        "id": "ing-0-rolled-oats",
+        "name": "Rolled Oats",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Rolled Oats used in yoga chocolate oats.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "alt-fallback-1-1789661698009",
+            "name": "Cold-Pressed Olive Oil & Natural Spiced yoga chocolate oats",
+            "scoreDelta": 12,
+            "reason": "Retains 100% identical core ingredients (yoga chocolate oats), replacing refined cooking oils with cold-pressed olive oil & whole spices."
+          },
+          {
+            "id": "alt-fallback-2-1789661698009",
+            "name": "Low-Sodium Himalayan Pink Salt yoga chocolate oats",
+            "scoreDelta": 15,
+            "reason": "Preserves identical core (yoga chocolate oats) while swapping commercial table salts with mineral-rich pink salt."
+          },
+          {
+            "id": "alt-fallback-3-1789661698009",
+            "name": "Probiotic-Marinated Slow-Dum Clean yoga chocolate oats",
+            "scoreDelta": 18,
+            "reason": "Uses identical yoga chocolate oats marinated in organic probiotic yogurt with zero chemical tenderizers or artificial colors."
+          }
+        ]
+      },
+      {
+        "id": "ing-1-sugar",
+        "name": "Sugar",
+        "scientificName": null,
+        "risk": "moderate",
+        "reason": "Added sugar with high glycemic impact",
+        "purpose": "Sweetener and flavor enhancer",
+        "description": "Sugar used in yoga chocolate oats.",
+        "healthEffects": [
+          "Added sugar with high glycemic impact"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-2-dark-chocolate-chips--sugar",
+        "name": "Dark Chocolate Chips (Sugar",
+        "scientificName": null,
+        "risk": "moderate",
+        "reason": "Added sugar with high glycemic impact",
+        "purpose": "Sweetener and flavor enhancer",
+        "description": "Dark Chocolate Chips (Sugar used in yoga chocolate oats.",
+        "healthEffects": [
+          "Added sugar with high glycemic impact"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-3-cocoa-solids",
+        "name": "Cocoa Solids",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Cocoa Solids used in yoga chocolate oats.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-4-cocoa-butter",
+        "name": "Cocoa Butter",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Cocoa Butter used in yoga chocolate oats.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-5-dextrose",
+        "name": "Dextrose",
+        "scientificName": null,
+        "risk": "moderate",
+        "reason": "Added sugar with high glycemic impact",
+        "purpose": "Sweetener and flavor enhancer",
+        "description": "Dextrose used in yoga chocolate oats.",
+        "healthEffects": [
+          "Added sugar with high glycemic impact"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-6-emulsifier--ins-322--",
+        "name": "Emulsifier (INS 322))",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Emulsifier (INS 322)) used in yoga chocolate oats.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-7-cocoa-powder",
+        "name": "Cocoa Powder",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Cocoa Powder used in yoga chocolate oats.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-8-pumpkin-seeds",
+        "name": "Pumpkin Seeds",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Pumpkin Seeds used in yoga chocolate oats.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-9-chia-seeds",
+        "name": "Chia Seeds",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Chia Seeds used in yoga chocolate oats.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-10-raisins",
+        "name": "Raisins",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Raisins used in yoga chocolate oats.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-11-almonds",
+        "name": "Almonds",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Almonds used in yoga chocolate oats.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-12-natural-rosemary-extract",
+        "name": "Natural Rosemary Extract",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Natural Rosemary Extract used in yoga chocolate oats.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      }
+    ]
+  },
+  {
+    "id": "scan-1789660140573",
+    "productName": "Ben & Jerry's Ice Creams",
+    "brand": "Home/Custom",
+    "scanDate": "2026-09-17",
+    "safetyScore": 88,
+    "verdict": "Safe",
+    "aiSummary": "Ben & Jerry's Ice Creams contains 8 analyzed ingredients. 2 ingredient(s) carry moderate or elevated health considerations.",
+    "allergyWarning": "Contains Milk (Dairy), Eggs.",
+    "ingredients": [
+      {
+        "id": "ing-0-cream",
+        "name": "Cream",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Cream used in Ben & Jerry's Ice Creams.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "alt-fallback-1-1789660146710",
+            "name": "Cold-Pressed Olive Oil & Natural Spiced Ben & Jerry's Ice Creams",
+            "scoreDelta": 12,
+            "reason": "Retains 100% identical core ingredients (Ben & Jerry's Ice Creams), replacing refined cooking oils with cold-pressed olive oil & whole spices."
+          },
+          {
+            "id": "alt-fallback-2-1789660146710",
+            "name": "Low-Sodium Himalayan Pink Salt Ben & Jerry's Ice Creams",
+            "scoreDelta": 15,
+            "reason": "Preserves identical core (Ben & Jerry's Ice Creams) while swapping commercial table salts with mineral-rich pink salt."
+          },
+          {
+            "id": "alt-fallback-3-1789660146710",
+            "name": "Probiotic-Marinated Slow-Dum Clean Ben & Jerry's Ice Creams",
+            "scoreDelta": 18,
+            "reason": "Uses identical Ben & Jerry's Ice Creams marinated in organic probiotic yogurt with zero chemical tenderizers or artificial colors."
+          }
+        ]
+      },
+      {
+        "id": "ing-1-skim-milk",
+        "name": "Skim Milk",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Skim Milk used in Ben & Jerry's Ice Creams.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-2-liquid-sugar",
+        "name": "Liquid Sugar",
+        "scientificName": null,
+        "risk": "moderate",
+        "reason": "Added sugar with high glycemic impact",
+        "purpose": "Sweetener and flavor enhancer",
+        "description": "Liquid Sugar used in Ben & Jerry's Ice Creams.",
+        "healthEffects": [
+          "Added sugar with high glycemic impact"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-3-egg-yolks",
+        "name": "Egg Yolks",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Egg Yolks used in Ben & Jerry's Ice Creams.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-4-sugar",
+        "name": "Sugar",
+        "scientificName": null,
+        "risk": "moderate",
+        "reason": "Added sugar with high glycemic impact",
+        "purpose": "Sweetener and flavor enhancer",
+        "description": "Sugar used in Ben & Jerry's Ice Creams.",
+        "healthEffects": [
+          "Added sugar with high glycemic impact"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-5-cocoa-butter",
+        "name": "Cocoa Butter",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Cocoa Butter used in Ben & Jerry's Ice Creams.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-6-guar-gum",
+        "name": "Guar Gum",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Guar Gum used in Ben & Jerry's Ice Creams.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-7-carrageenan",
+        "name": "Carrageenan",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Carrageenan used in Ben & Jerry's Ice Creams.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      }
+    ],
+    "nutritionProfile": {
+      "calories": 340,
+      "servingSize": "2/3 cup (142g)",
+      "macros": [
+        {
+          "name": "Protein",
+          "amount": "6",
+          "unit": "g",
+          "dailyValue": 12,
+          "goodFor": [
+            "General Fitness"
+          ]
+        },
+        {
+          "name": "Total Fat",
+          "amount": "20",
+          "unit": "g",
+          "dailyValue": 26,
+          "badFor": [
+            "Fat Loss"
+          ]
+        },
+        {
+          "name": "Saturated Fat",
+          "amount": "12",
+          "unit": "g",
+          "dailyValue": 60,
+          "badFor": [
+            "Heart Disease",
+            "High Cholesterol"
+          ]
+        },
+        {
+          "name": "Total Carbohydrates",
+          "amount": "36",
+          "unit": "g",
+          "dailyValue": 13
+        },
+        {
+          "name": "Dietary Fiber",
+          "amount": "1",
+          "unit": "g",
+          "dailyValue": 4
+        },
+        {
+          "name": "Total Sugars",
+          "amount": "31",
+          "unit": "g",
+          "dailyValue": 62,
+          "badFor": [
+            "Diabetes",
+            "Fat Loss",
+            "Obesity"
+          ]
+        },
+        {
+          "name": "Sodium",
+          "amount": "95",
+          "unit": "mg",
+          "dailyValue": 4
+        }
+      ],
+      "vitamins": [
+        {
+          "name": "Vitamin A",
+          "amount": "140",
+          "unit": "mcg",
+          "dailyValue": 16
+        },
+        {
+          "name": "Vitamin D",
+          "amount": "1.4",
+          "unit": "mcg",
+          "dailyValue": 14
+        },
+        {
+          "name": "Vitamin B12",
+          "amount": "0.7",
+          "unit": "mcg",
+          "dailyValue": 29
+        }
+      ],
+      "minerals": [
+        {
+          "name": "Calcium",
+          "amount": "180",
+          "unit": "mg",
+          "dailyValue": 18,
+          "goodFor": [
+            "Strength",
+            "General Fitness"
+          ],
+          "benefitLabel": "Dairy calcium supports bone density"
+        },
+        {
+          "name": "Phosphorus",
+          "amount": "145",
+          "unit": "mg",
+          "dailyValue": 12
+        },
+        {
+          "name": "Potassium",
+          "amount": "260",
+          "unit": "mg",
+          "dailyValue": 6
+        }
+      ]
+    }
+  },
+  {
+    "id": "scan-1789635661552",
+    "productName": "Chicken Biryani",
+    "brand": "Home/Custom",
+    "scanDate": "2026-09-17",
+    "safetyScore": 94,
+    "verdict": "Safe",
+    "aiSummary": "Chicken Biryani contains 6 analyzed ingredients. 1 ingredient(s) carry moderate or elevated health considerations.",
+    "allergyWarning": null,
+    "ingredients": [
+      {
+        "id": "ing-0-chicken",
+        "name": "Chicken",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Chicken used in Chicken Biryani.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "alt-fallback-1-1789635672981",
+            "name": "Cold-Pressed Olive Oil & Natural Spiced Chicken Biryani",
+            "scoreDelta": 9,
+            "reason": "Retains 100% identical core ingredients (Chicken Biryani), replacing refined cooking oils with cold-pressed olive oil & whole spices."
+          },
+          {
+            "id": "alt-fallback-2-1789635672981",
+            "name": "Low-Sodium Himalayan Pink Salt Chicken Biryani",
+            "scoreDelta": 10,
+            "reason": "Preserves identical core (Chicken Biryani) while swapping commercial table salts with mineral-rich pink salt."
+          },
+          {
+            "id": "alt-fallback-3-1789635672981",
+            "name": "Probiotic-Marinated Slow-Dum Clean Chicken Biryani",
+            "scoreDelta": 11,
+            "reason": "Uses identical Chicken Biryani marinated in organic probiotic yogurt with zero chemical tenderizers or artificial colors."
+          }
+        ]
+      },
+      {
+        "id": "ing-1-basmati-rice",
+        "name": "Basmati Rice",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Basmati Rice used in Chicken Biryani.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-2-vegetable-oil",
+        "name": "Vegetable Oil",
+        "scientificName": null,
+        "risk": "moderate",
+        "reason": "Refined fat source high in omega-6 fatty acids",
+        "purpose": "Texture, moisture, and mouthfeel",
+        "description": "Vegetable Oil used in Chicken Biryani.",
+        "healthEffects": [
+          "Refined fat source high in omega-6 fatty acids"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-3-salt",
+        "name": "Salt",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Salt used in Chicken Biryani.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-4-biryani-masala",
+        "name": "Biryani Masala",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Biryani Masala used in Chicken Biryani.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-5-food-color",
+        "name": "Food Color",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Food Color used in Chicken Biryani.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      }
+    ]
+  },
+  {
+    "id": "scan-1789629439192",
+    "productName": "Chicken Tikka Masla",
+    "brand": "Home/Custom",
+    "scanDate": "2026-09-17",
+    "safetyScore": 82,
+    "verdict": "Safe",
+    "aiSummary": "Chicken Tikka Masla contains 63 analyzed ingredients. 3 ingredient(s) carry moderate or elevated health considerations.",
+    "allergyWarning": "Contains Milk (Dairy), Wheat (Gluten), Eggs, Soy, Tree Nuts/Peanuts.",
+    "ingredients": [
+      {
+        "id": "ing-0-chicken--boneless",
+        "name": "Chicken: Boneless",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Chicken: Boneless used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-1-skinless-chicken-thighs--for-juicy-results--or-chicken-breasts",
+        "name": "Skinless chicken thighs (for juicy results) or chicken breasts",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "skinless chicken thighs (for juicy results) or chicken breasts used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-2-cut-into-bite-sized-cubes-yogurt--plain",
+        "name": "Cut into bite-sized cubes.Yogurt: Plain",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "cut into bite-sized cubes.Yogurt: Plain used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-3-thick-yogurt-or-greek-yogurt--acts-as-a-tenderiser--lemon-juice--freshly-squeezed-for-acidity-aromatics--fresh-ginger-garlic-paste-spices--garam-masala",
+        "name": "Thick yogurt or Greek yogurt (acts as a tenderiser).Lemon Juice: Freshly squeezed for acidity.Aromatics: Fresh ginger-garlic paste.Spices: Garam masala",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "thick yogurt or Greek yogurt (acts as a tenderiser).Lemon Juice: Freshly squeezed for acidity.Aromatics: Fresh ginger-garlic paste.Spices: Garam masala used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-4-kashmiri-red-chili-powder--for-color-and-mild-heat-",
+        "name": "Kashmiri red chili powder (for color and mild heat)",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Kashmiri red chili powder (for color and mild heat) used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-5-turmeric-powder",
+        "name": "Turmeric powder",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "turmeric powder used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-6-ground-cumin",
+        "name": "Ground cumin",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "ground cumin used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-7-and-salt-oil-butter--for-pan-searing-or-grilling-the-chicken-fats--butter-and-oil--a-combination-prevents-the-butter-from-burning--aromatics--finely-chopped-onions",
+        "name": "And salt.Oil/Butter: For pan-searing or grilling the chicken.Fats: Butter and oil (a combination prevents the butter from burning).Aromatics: Finely chopped onions",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "and salt.Oil/Butter: For pan-searing or grilling the chicken.Fats: Butter and oil (a combination prevents the butter from burning).Aromatics: Finely chopped onions used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-8-fresh-ginger",
+        "name": "Fresh ginger",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "fresh ginger used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-9-and-minced-garlic-tomato-base--tomato-pur-e--canned-tomato-pur-e-provides-the-best-smooth-texture-and-deep-red-color--spices--garam-masala",
+        "name": "And minced garlic.Tomato Base: Tomato purée (canned tomato purée provides the best smooth texture and deep red color).Spices: Garam masala",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "and minced garlic.Tomato Base: Tomato purée (canned tomato purée provides the best smooth texture and deep red color).Spices: Garam masala used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-10-ground-cumin",
+        "name": "Ground cumin",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "ground cumin used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-11-ground-coriander",
+        "name": "Ground coriander",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "ground coriander used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-12-turmeric",
+        "name": "Turmeric",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "turmeric used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-13-and-kashmiri-red-chili-powder-dairy--heavy-cream--or-fresh-cream--to-give-the-sauce-its-signature-velvety",
+        "name": "And Kashmiri red chili powder.Dairy: Heavy cream (or fresh cream) to give the sauce its signature velvety",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "and Kashmiri red chili powder.Dairy: Heavy cream (or fresh cream) to give the sauce its signature velvety used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-14-rich-finish-sweetener--a-pinch-of-sugar-or-honey-to-balance-the-acidity-of-the-tomatoes-herb-finisher--fresh-coriander-leaves--cilantro--for-garnishing-ai-mode-conversation--ingredients-of-noodlesingredients-of-noodlesthe-core-ingredients-of-standard-dry-or-fresh-noodles-are-incredibly-simple",
+        "name": "Rich finish.Sweetener: A pinch of sugar or honey to balance the acidity of the tomatoes.Herb Finisher: Fresh coriander leaves (cilantro) for garnishing.AI Mode conversation: ingredients of noodlesingredients of noodlesThe core ingredients of standard dry or fresh noodles are incredibly simple",
+        "scientificName": null,
+        "risk": "moderate",
+        "reason": "Added sugar with high glycemic impact",
+        "purpose": "Sweetener and flavor enhancer",
+        "description": "rich finish.Sweetener: A pinch of sugar or honey to balance the acidity of the tomatoes.Herb Finisher: Fresh coriander leaves (cilantro) for garnishing.AI Mode conversation: ingredients of noodlesingredients of noodlesThe core ingredients of standard dry or fresh noodles are incredibly simple used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Added sugar with high glycemic impact"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-15-typically-requiring-just-flour",
+        "name": "Typically requiring just flour",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "typically requiring just flour used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-16-water",
+        "name": "Water",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "water used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-17-and-salt--depending-on-the-specific-style-of-noodle-you-want-to-make-or-cook--like-a-stir-fry-or-soup-",
+        "name": "And salt. Depending on the specific style of noodle you want to make or cook (like a stir-fry or soup)",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "and salt. Depending on the specific style of noodle you want to make or cook (like a stir-fry or soup) used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-18-the-ingredients-expand-significantly-here-is-a-breakdown-of-noodle-ingredients-by-category-core-noodle-doughif-you-are-making-raw-noodles-from-scratch",
+        "name": "The ingredients expand significantly.Here is a breakdown of noodle ingredients by category:Core Noodle DoughIf you are making raw noodles from scratch",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "the ingredients expand significantly.Here is a breakdown of noodle ingredients by category:Core Noodle DoughIf you are making raw noodles from scratch used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-19-the-ingredients-vary-by-the-type-of-noodle-wheat-noodles--all-purpose-or-bread-flour",
+        "name": "The ingredients vary by the type of noodle:Wheat Noodles: All-purpose or bread flour",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "the ingredients vary by the type of noodle:Wheat Noodles: All-purpose or bread flour used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-20-water",
+        "name": "Water",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "water used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-21-and-salt-egg-noodles--wheat-flour",
+        "name": "And salt.Egg Noodles: Wheat flour",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "and salt.Egg Noodles: Wheat flour used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-22-water",
+        "name": "Water",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "water used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-23-salt",
+        "name": "Salt",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "salt used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-24-and-whole-eggs-or-egg-yolks--which-add-a-rich-golden-color-and-al-dente-texture--rice-noodles--rice-flour-and-water-soba-noodles--buckwheat-flour-and-water-popular-stir-fry-ingredients--chow-mein---hakka-noodles-if-you-are-cooking-a-classic-restaurant-or-street-style-stir-fry-noodle-dish",
+        "name": "And whole eggs or egg yolks (which add a rich golden color and al dente texture).Rice Noodles: Rice flour and water.Soba Noodles: Buckwheat flour and water.Popular Stir-Fry Ingredients (Chow Mein / Hakka Noodles)If you are cooking a classic restaurant or street-style stir-fry noodle dish",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "and whole eggs or egg yolks (which add a rich golden color and al dente texture).Rice Noodles: Rice flour and water.Soba Noodles: Buckwheat flour and water.Popular Stir-Fry Ingredients (Chow Mein / Hakka Noodles)If you are cooking a classic restaurant or street-style stir-fry noodle dish used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-25-you-will-generally-need-aromatics---vegetablesgarlic-and-ginger--finely-minced-or-chopped-for-the-flavour-base-onions---spring-onions--red-or-yellow-onions-for-sweetness",
+        "name": "You will generally need:Aromatics & VegetablesGarlic and Ginger: Finely minced or chopped for the flavour base.Onions & Spring Onions: Red or yellow onions for sweetness",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "you will generally need:Aromatics & VegetablesGarlic and Ginger: Finely minced or chopped for the flavour base.Onions & Spring Onions: Red or yellow onions for sweetness used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-26-and-green-scallions-for-a-fresh-crunch-garnish-crunchy-veggies--cabbage--thinly-shredded-",
+        "name": "And green scallions for a fresh crunch garnish.Crunchy Veggies: Cabbage (thinly shredded)",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "and green scallions for a fresh crunch garnish.Crunchy Veggies: Cabbage (thinly shredded) used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-27-carrots--julienned-",
+        "name": "Carrots (julienned)",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "carrots (julienned) used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-28-bell-peppers--capsicum-",
+        "name": "Bell peppers (capsicum)",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "bell peppers (capsicum) used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-29-and-french-beans-sauces---seasoningssoy-sauce--both-light-and-dark-soy-sauce-are-often-combined-for-a-balance-of-salt-and-deep-umami-color-vinegar--white-vinegar-or-rice-vinegar-to-add-a-subtle-tang-chili-sauce--green-chili-sauce",
+        "name": "And French beans.Sauces & SeasoningsSoy Sauce: Both light and dark soy sauce are often combined for a balance of salt and deep umami color.Vinegar: White vinegar or rice vinegar to add a subtle tang.Chili Sauce: Green chili sauce",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "and French beans.Sauces & SeasoningsSoy Sauce: Both light and dark soy sauce are often combined for a balance of salt and deep umami color.Vinegar: White vinegar or rice vinegar to add a subtle tang.Chili Sauce: Green chili sauce used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-30-red-chili-sauce",
+        "name": "Red chili sauce",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "red chili sauce used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-31-or-sriracha-for-heat-spices---enhancers--freshly-crushed-black-pepper",
+        "name": "Or Sriracha for heat.Spices & Enhancers: Freshly crushed black pepper",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "or Sriracha for heat.Spices & Enhancers: Freshly crushed black pepper used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-32-a-pinch-of-sugar--to-balance-the-acidity-",
+        "name": "A pinch of sugar (to balance the acidity)",
+        "scientificName": null,
+        "risk": "moderate",
+        "reason": "Added sugar with high glycemic impact",
+        "purpose": "Sweetener and flavor enhancer",
+        "description": "a pinch of sugar (to balance the acidity) used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Added sugar with high glycemic impact"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-33-and-optional-msg-or-bouillon-powder-for-authentic-street-style-depth-proteins---fatscooking-oil--sesame-oil-gives-the-most-authentic-flavor",
+        "name": "And optional MSG or bouillon powder for authentic street-style depth.Proteins & FatsCooking Oil: Sesame oil gives the most authentic flavor",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "and optional MSG or bouillon powder for authentic street-style depth.Proteins & FatsCooking Oil: Sesame oil gives the most authentic flavor used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-34-but-neutral-oils-like-vegetable",
+        "name": "But neutral oils like vegetable",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "but neutral oils like vegetable used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-35-sunflower",
+        "name": "Sunflower",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "sunflower used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-36-or-peanut-oil-work-perfectly-proteins--whisked-eggs",
+        "name": "Or peanut oil work perfectly.Proteins: Whisked eggs",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "or peanut oil work perfectly.Proteins: Whisked eggs used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-37-shredded-chicken",
+        "name": "Shredded chicken",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "shredded chicken used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-38-paneer",
+        "name": "Paneer",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "paneer used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-39-or-tofu-are-you-looking-to-make-the-noodle-dough-from-scratch",
+        "name": "Or tofu.Are you looking to make the noodle dough from scratch",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "or tofu.Are you looking to make the noodle dough from scratch used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-40-or-are-you-planning-a-specific-dish-like-soupy-ramen-or-spicy-street-style-stir-fry--let-me-know-so-i-can-give-you-exact-measurements-youtube-yummybetter-than-restaurant--street-style-veg-noodles---youtubeveg-hakka-noodles---better-than-restaurant--street-style-veg-noodles---youtube--this-content-isn-t-available--welcome-to-yummy-tod---youtube-tastyhow-to-make-homemade-egg-noodles---how-to-make-homemade-egg-noodles----did-you-know-you-only-need-four-ingredients-to-make-egg-noodles-at-home-flour-water-salt-and-a---0-25wikipedianoodle---wikipediatypes-by-primary-ingredient--see-also--list-of-noodles---wheat--arishta--armenian-thick-noodles-made-from-wheat",
+        "name": "Or are you planning a specific dish like soupy ramen or spicy street-style stir-fry? Let me know so I can give you exact measurements!YouTube·YummyBetter Than Restaurant! Street Style Veg Noodles - YouTubeVeg Hakka Noodles | Better Than Restaurant! Street Style Veg Noodles - YouTube. This content isn't available. WELCOME TO YUMMY TOD...YouTube·TastyHow To Make Homemade Egg Noodles 🍜How To Make Homemade Egg Noodles 🍜 did you know you only need four ingredients to make egg noodles at home flour water salt and a...0:25WikipediaNoodle - WikipediaTypes by primary ingredient. See also: List of noodles · Wheat. Arishta: Armenian thick noodles made from wheat",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "or are you planning a specific dish like soupy ramen or spicy street-style stir-fry? Let me know so I can give you exact measurements!YouTube·YummyBetter Than Restaurant! Street Style Veg Noodles - YouTubeVeg Hakka Noodles | Better Than Restaurant! Street Style Veg Noodles - YouTube. This content isn't available. WELCOME TO YUMMY TOD...YouTube·TastyHow To Make Homemade Egg Noodles 🍜How To Make Homemade Egg Noodles 🍜 did you know you only need four ingredients to make egg noodles at home flour water salt and a...0:25WikipediaNoodle - WikipediaTypes by primary ingredient. See also: List of noodles · Wheat. Arishta: Armenian thick noodles made from wheat used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-41-salt-and-water-co---show-allingrendinets-of-chicken-tikka--maslathe-core-ingredients-of-a-classic-chicken-tikka-masala-are-divided-into-two-main-parts--the-spiced-chicken-marinade--the--tikka---and-the-rich",
+        "name": "Salt and water co...Show allingrendinets of chicken tikka  maslaThe core ingredients of a classic Chicken Tikka Masala are divided into two main parts: the spiced chicken marinade (the \"tikka\") and the rich",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "salt and water co...Show allingrendinets of chicken tikka  maslaThe core ingredients of a classic Chicken Tikka Masala are divided into two main parts: the spiced chicken marinade (the \"tikka\") and the rich used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-42-creamy-tomato-sauce--the--masala---here-is-the-comprehensive-list-of-ingredients-required-to-make-it-1--the-chicken-tikka--marinade-the-chicken-is-cut-into-bite-sized-pieces",
+        "name": "Creamy tomato sauce (the \"masala\").Here is the comprehensive list of ingredients required to make it:1. The Chicken Tikka (Marinade)The chicken is cut into bite-sized pieces",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "creamy tomato sauce (the \"masala\").Here is the comprehensive list of ingredients required to make it:1. The Chicken Tikka (Marinade)The chicken is cut into bite-sized pieces used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-43-marinated",
+        "name": "Marinated",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "marinated used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-44-and-then-grilled-or-pan-seared-until-charred-chicken--boneless",
+        "name": "And then grilled or pan-seared until charred.Chicken: Boneless",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "and then grilled or pan-seared until charred.Chicken: Boneless used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-45-skinless-chicken-thighs--for-juicy-results--or-chicken-breasts",
+        "name": "Skinless chicken thighs (for juicy results) or chicken breasts",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "skinless chicken thighs (for juicy results) or chicken breasts used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-46-cut-into-bite-sized-cubes-yogurt--plain",
+        "name": "Cut into bite-sized cubes.Yogurt: Plain",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "cut into bite-sized cubes.Yogurt: Plain used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-47-thick-yogurt-or-greek-yogurt--acts-as-a-tenderiser--lemon-juice--freshly-squeezed-for-acidity-aromatics--fresh-ginger-garlic-paste-spices--garam-masala",
+        "name": "Thick yogurt or Greek yogurt (acts as a tenderiser).Lemon Juice: Freshly squeezed for acidity.Aromatics: Fresh ginger-garlic paste.Spices: Garam masala",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "thick yogurt or Greek yogurt (acts as a tenderiser).Lemon Juice: Freshly squeezed for acidity.Aromatics: Fresh ginger-garlic paste.Spices: Garam masala used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-48-kashmiri-red-chili-powder--for-color-and-mild-heat-",
+        "name": "Kashmiri red chili powder (for color and mild heat)",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "Kashmiri red chili powder (for color and mild heat) used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-49-turmeric-powder",
+        "name": "Turmeric powder",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "turmeric powder used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-50-ground-cumin",
+        "name": "Ground cumin",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "ground cumin used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-51-and-salt-oil-butter--for-pan-searing-or-grilling-the-chicken-2--the-masala--the-sauce-a-smooth",
+        "name": "And salt.Oil/Butter: For pan-searing or grilling the chicken.2. The Masala (The Sauce)A smooth",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "and salt.Oil/Butter: For pan-searing or grilling the chicken.2. The Masala (The Sauce)A smooth used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-52-vibrant",
+        "name": "Vibrant",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "vibrant used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-53-and-creamy-gravy-that-coats-the-grilled-chicken-fats--butter-and-oil--a-combination-prevents-the-butter-from-burning--aromatics--finely-chopped-onions",
+        "name": "And creamy gravy that coats the grilled chicken.Fats: Butter and oil (a combination prevents the butter from burning).Aromatics: Finely chopped onions",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "and creamy gravy that coats the grilled chicken.Fats: Butter and oil (a combination prevents the butter from burning).Aromatics: Finely chopped onions used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-54-fresh-ginger",
+        "name": "Fresh ginger",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "fresh ginger used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-55-and-minced-garlic-tomato-base--tomato-pur-e--canned-tomato-pur-e-provides-the-best-smooth-texture-and-deep-red-color--spices--garam-masala",
+        "name": "And minced garlic.Tomato Base: Tomato purée (canned tomato purée provides the best smooth texture and deep red color).Spices: Garam masala",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "and minced garlic.Tomato Base: Tomato purée (canned tomato purée provides the best smooth texture and deep red color).Spices: Garam masala used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-56-ground-cumin",
+        "name": "Ground cumin",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "ground cumin used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-57-ground-coriander",
+        "name": "Ground coriander",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "ground coriander used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-58-turmeric",
+        "name": "Turmeric",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "turmeric used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-59-and-kashmiri-red-chili-powder-dairy--heavy-cream--or-fresh-cream--to-give-the-sauce-its-signature-velvety",
+        "name": "And Kashmiri red chili powder.Dairy: Heavy cream (or fresh cream) to give the sauce its signature velvety",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "and Kashmiri red chili powder.Dairy: Heavy cream (or fresh cream) to give the sauce its signature velvety used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-60-rich-finish-sweetener--a-pinch-of-sugar-or-honey-to-balance-the-acidity-of-the-tomatoes-herb-finisher--fresh-coriander-leaves--cilantro--for-garnishing-3--optional-enhancerskasuri-methi--dried-fenugreek-leaves---crushed-and-added-at-the-very-end-for-an-authentic-restaurant-style-aroma-smoky-effect--dhungan-method---a-piece-of-hot-charcoal-placed-in-a-small-bowl-inside-the-curry-pot",
+        "name": "Rich finish.Sweetener: A pinch of sugar or honey to balance the acidity of the tomatoes.Herb Finisher: Fresh coriander leaves (cilantro) for garnishing.3. Optional EnhancersKasuri Methi (Dried Fenugreek Leaves): Crushed and added at the very end for an authentic restaurant-style aroma.Smoky Effect (Dhungan method): A piece of hot charcoal placed in a small bowl inside the curry pot",
+        "scientificName": null,
+        "risk": "moderate",
+        "reason": "Added sugar with high glycemic impact",
+        "purpose": "Sweetener and flavor enhancer",
+        "description": "rich finish.Sweetener: A pinch of sugar or honey to balance the acidity of the tomatoes.Herb Finisher: Fresh coriander leaves (cilantro) for garnishing.3. Optional EnhancersKasuri Methi (Dried Fenugreek Leaves): Crushed and added at the very end for an authentic restaurant-style aroma.Smoky Effect (Dhungan method): A piece of hot charcoal placed in a small bowl inside the curry pot used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Added sugar with high glycemic impact"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-61-drizzled-with-ghee",
+        "name": "Drizzled with ghee",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "drizzled with ghee used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "ing-62-and-covered-for-2-minutes-to-mimic-a-traditional-clay-tandoor-",
+        "name": "And covered for 2 minutes to mimic a traditional clay tandoor.",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Common dietary ingredient with standard safety profile",
+        "purpose": "Provides texture and flavor",
+        "description": "and covered for 2 minutes to mimic a traditional clay tandoor. used in Chicken Tikka Masla.",
+        "healthEffects": [
+          "Common dietary ingredient with standard safety profile"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      }
+    ]
+  },
+  {
+    "id": "scan-1789629283539",
+    "productName": "Noodles",
+    "brand": "Home/Custom",
+    "scanDate": "2026-09-17",
+    "safetyScore": 94,
+    "verdict": "Safe",
+    "aiSummary": "These homemade noodles consist of simple, traditional ingredients with no artificial additives or preservatives. While safe and wholesome, they are primarily composed of refined carbohydrates and contain added sodium, which may impact blood sugar and blood pressure if consumed in large quantities. Opting for whole-grain flour or reducing salt can significantly improve their nutritional value.",
+    "allergyWarning": "Contains Wheat (Gluten).",
+    "ingredients": [
+      {
+        "id": "wheat-flour",
+        "name": "Wheat Flour",
+        "scientificName": "Triticum aestivum flour",
+        "risk": "safe",
+        "reason": "A standard, minimally processed food staple, though it contains gluten which is a major allergen.",
+        "purpose": "Provides structure, forms the gluten network, and acts as the primary bulk ingredient.",
+        "description": "A powder obtained by grinding wheat kernels, rich in starch and gluten-forming proteins.",
+        "healthEffects": [
+          "Provides readily available energy through carbohydrates",
+          "May cause rapid blood glucose spikes due to refined starch",
+          "Triggers adverse immune responses in individuals with celiac disease or gluten sensitivity"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "whole-wheat-flour",
+            "name": "Whole Wheat Flour",
+            "scoreDelta": 5,
+            "reason": "Retains the bran and germ, providing significantly more dietary fiber, vitamins, and minerals with a lower glycemic index."
+          },
+          {
+            "id": "chickpea-flour",
+            "name": "Chickpea Flour",
+            "scoreDelta": 8,
+            "reason": "A gluten-free alternative that is substantially higher in protein and dietary fiber."
+          }
+        ]
+      },
+      {
+        "id": "water",
+        "name": "Water",
+        "scientificName": "Dihydrogen monoxide",
+        "risk": "safe",
+        "reason": "Essential for life and completely non-toxic.",
+        "purpose": "Hydrates the flour proteins to develop gluten and bind the dough.",
+        "description": "A transparent, odorless, and tasteless liquid compound essential for food preparation.",
+        "healthEffects": [
+          "Essential for cellular hydration",
+          "Supports metabolic and digestive functions"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "salt",
+        "name": "Salt",
+        "scientificName": "Sodium chloride",
+        "risk": "moderate",
+        "reason": "Excessive consumption is strongly linked to hypertension and cardiovascular diseases.",
+        "purpose": "Enhances flavor and strengthens the gluten structure in the dough.",
+        "description": "A crystalline mineral substance composed primarily of sodium chloride, used globally as a seasoning.",
+        "healthEffects": [
+          "Helps maintain proper fluid balance and nerve function",
+          "Can elevate blood pressure and increase cardiovascular risk when consumed in excess"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "potassium-chloride",
+            "name": "Potassium Chloride",
+            "scoreDelta": 3,
+            "reason": "Provides a salty flavor profile while reducing sodium intake, which helps manage and lower blood pressure."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scan-1789622367336",
+    "productName": "Red Velvet Cake",
+    "brand": "Home/Custom",
+    "scanDate": "2026-09-17",
+    "safetyScore": 88,
+    "verdict": "Safe",
+    "aiSummary": "This custom Red Velvet Cake contains high amounts of sugar and saturated fats from cream and milk, which can impact cardiovascular health if consumed excessively. It also contains major allergens including milk and eggs, requiring caution for sensitive individuals. While the ingredients are generally recognized as safe, the nutritional profile is typical of a high-calorie dessert.",
+    "allergyWarning": "Contains Milk (Dairy) and Eggs.",
+    "ingredients": [
+      {
+        "id": "gelatin",
+        "name": "Gelatin",
+        "scientificName": "Hydrolyzed collagen",
+        "risk": "safe",
+        "reason": "Generally recognized as safe (GRAS) protein source derived from animal collagen.",
+        "purpose": "Gelling agent, stabilizer, and thickener.",
+        "description": "A translucent, colorless, flavorless food ingredient derived from collagen taken from animal body parts.",
+        "healthEffects": [
+          "Provides amino acids",
+          "Supports joint health"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "agar-agar",
+            "name": "Agar-agar",
+            "scoreDelta": 5,
+            "reason": "Plant-based vegan alternative with high fiber content."
+          }
+        ]
+      },
+      {
+        "id": "sugar",
+        "name": "Sugar",
+        "scientificName": "Sucrose",
+        "risk": "moderate",
+        "reason": "High intake is linked to obesity, type 2 diabetes, and dental caries.",
+        "purpose": "Sweetener and bulking agent.",
+        "description": "A sweet crystalline substance obtained from various plants, consisting essentially of sucrose.",
+        "healthEffects": [
+          "Spikes blood glucose levels",
+          "Increases risk of tooth decay",
+          "Contributes to weight gain"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "stevia",
+            "name": "Stevia",
+            "scoreDelta": 15,
+            "reason": "Zero-calorie natural sweetener that does not affect blood sugar levels."
+          }
+        ]
+      },
+      {
+        "id": "egg",
+        "name": "Egg",
+        "scientificName": "Gallus gallus domesticus ovum",
+        "risk": "safe",
+        "reason": "Nutrient-dense whole food, though a major allergen.",
+        "purpose": "Emulsifier, binder, and leavening agent.",
+        "description": "A whole egg containing high-quality protein, vitamins, and minerals.",
+        "healthEffects": [
+          "Provides high-quality protein",
+          "Contains essential choline",
+          "May trigger allergic reactions in sensitive individuals"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "applesauce",
+            "name": "Applesauce",
+            "scoreDelta": 5,
+            "reason": "Lower fat, allergen-free binding agent for baking."
+          }
+        ]
+      },
+      {
+        "id": "yeast",
+        "name": "Yeast",
+        "scientificName": "Saccharomyces cerevisiae",
+        "risk": "safe",
+        "reason": "Standard biological leavening agent, safe for consumption when cooked.",
+        "purpose": "Leavening agent.",
+        "description": "A microscopic single-celled fungus used to ferment carbohydrates, producing carbon dioxide to rise dough.",
+        "healthEffects": [
+          "Provides B-complex vitamins",
+          "Supports gut health"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "baking-powder",
+            "name": "Baking Powder",
+            "scoreDelta": 2,
+            "reason": "Chemical leavener that acts faster and is more typical for cakes."
+          }
+        ]
+      },
+      {
+        "id": "milk",
+        "name": "Milk",
+        "scientificName": "Lacteal secretion",
+        "risk": "safe",
+        "reason": "Nutritious dairy liquid, but contains lactose and is a common allergen.",
+        "purpose": "Moisture, structure, and nutrient provider.",
+        "description": "A nutrient-rich liquid food produced by the mammary glands of mammals.",
+        "healthEffects": [
+          "Provides calcium and vitamin D",
+          "Can cause digestive discomfort in lactose-intolerant individuals"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "almond-milk",
+            "name": "Almond Milk",
+            "scoreDelta": 8,
+            "reason": "Lactose-free, lower calorie plant-based alternative."
+          }
+        ]
+      },
+      {
+        "id": "cream",
+        "name": "Cream",
+        "scientificName": "Butterfat emulsion",
+        "risk": "moderate",
+        "reason": "High in saturated fats and calories, which can impact cholesterol levels.",
+        "purpose": "Adds richness, texture, and fat content.",
+        "description": "The thick white or pale yellow fatty liquid which rises to the top of milk.",
+        "healthEffects": [
+          "High in saturated fats",
+          "Increases caloric density",
+          "Provides fat-soluble vitamins"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "coconut-cream",
+            "name": "Coconut Cream",
+            "scoreDelta": 4,
+            "reason": "Plant-based alternative, though still high in saturated fat, it is lactose-free."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scan-1789155114270",
+    "productName": "Amul Gold Milk",
+    "brand": "Home/Custom",
+    "scanDate": "2026-09-11",
+    "safetyScore": 100,
+    "verdict": "Safe",
+    "aiSummary": "Amul Gold Milk is a highly nutritious, pasteurized full-cream milk fortified with essential Vitamins A and D. It provides a rich source of calcium, high-quality protein, and healthy fats, making it excellent for bone health and overall development. It is completely safe for general consumption, though individuals with lactose intolerance or dairy allergies should avoid it.",
+    "allergyWarning": "Contains Milk (Dairy).",
+    "ingredients": [
+      {
+        "id": "standardised-milk",
+        "name": "Standardised Milk",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Natural dairy product, pasteurized for safety, rich in essential nutrients.",
+        "purpose": "Primary beverage base, providing fat, protein, and calcium.",
+        "description": "Full cream milk standardized to contain a minimum of 6% fat and 9% Solids-Not-Fat (SNF).",
+        "healthEffects": [
+          "Supports bone health",
+          "Provides high-quality protein",
+          "Source of essential fatty acids"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "organic-whole-milk",
+            "name": "Organic Whole Milk",
+            "scoreDelta": 3,
+            "reason": "Reduces potential exposure to synthetic hormones or pesticide residues sometimes found in conventional dairy farming."
+          }
+        ]
+      },
+      {
+        "id": "vitamin-a",
+        "name": "Vitamin A",
+        "scientificName": "Retinyl palmitate",
+        "risk": "safe",
+        "reason": "Essential micronutrient added for fortification to prevent deficiencies.",
+        "purpose": "Nutritional fortification",
+        "description": "A fat-soluble vitamin essential for maintaining healthy vision, immune function, and skin health.",
+        "healthEffects": [
+          "Supports healthy vision",
+          "Boosts immune system function"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "vitamin-d",
+        "name": "Vitamin D",
+        "scientificName": "Cholecalciferol",
+        "risk": "safe",
+        "reason": "Essential micronutrient that aids calcium absorption, crucial for bone health.",
+        "purpose": "Nutritional fortification",
+        "description": "A fat-soluble vitamin that helps the body absorb calcium and phosphorus from the diet.",
+        "healthEffects": [
+          "Enhances calcium absorption",
+          "Supports bone and teeth strength",
+          "Modulates immune function"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      }
+    ]
+  },
+  {
+    "id": "scan-1789154883481",
+    "productName": "Low-Carb / Keto-Friendly Bars",
+    "brand": "Home/Custom",
+    "scanDate": "2026-09-11",
+    "safetyScore": 88,
+    "verdict": "Safe",
+    "aiSummary": "While these bars offer a high protein content from soy and dairy sources, they contain maltitol syrup, a sugar alcohol known to cause gastrointestinal distress and elevate blood glucose levels, which may conflict with 'keto-friendly' claims. Additionally, the inclusion of palm kernel oil raises the saturated fat profile, and the product contains multiple major allergens including soy, milk, and tree nuts.",
+    "allergyWarning": "Contains Soy, Milk (Dairy), and Tree Nuts (Almonds).",
+    "ingredients": [
+      {
+        "id": "soy-protein-isolate",
+        "name": "Soy Protein Isolate",
+        "scientificName": "Soy protein isolate",
+        "risk": "safe",
+        "reason": "Generally recognized as safe, but is a major allergen.",
+        "purpose": "Protein enrichment and texture",
+        "description": "A highly refined form of soy protein with a minimum protein content of 90%.",
+        "healthEffects": [
+          "Provides essential amino acids",
+          "May cause allergic reactions in sensitive individuals"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "pea-protein-isolate",
+            "name": "Pea Protein Isolate",
+            "scoreDelta": 5,
+            "reason": "A hypoallergenic plant protein alternative with a similar protein profile."
+          }
+        ]
+      },
+      {
+        "id": "calcium-caseinate",
+        "name": "Calcium Caseinate",
+        "scientificName": "Calcium caseinate",
+        "risk": "safe",
+        "reason": "Safe protein source, but is a milk allergen.",
+        "purpose": "Slow-digesting protein source and emulsifier",
+        "description": "A protein derived from casein in milk, used for its slow absorption rate and texture-building properties.",
+        "healthEffects": [
+          "Sustained amino acid release",
+          "Allergenic for individuals with milk allergies"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "micellar-casein",
+            "name": "Micellar Casein",
+            "scoreDelta": 2,
+            "reason": "A less processed form of milk protein that retains more native structure."
+          }
+        ]
+      },
+      {
+        "id": "whey-protein-isolate",
+        "name": "Whey Protein Isolate",
+        "scientificName": "Whey protein isolate",
+        "risk": "safe",
+        "reason": "Highly bioavailable protein source, but contains dairy allergens.",
+        "purpose": "Rapidly digesting protein source",
+        "description": "A dietary supplement and food ingredient created by filtering components from whey.",
+        "healthEffects": [
+          "Supports muscle protein synthesis",
+          "May cause digestive issues in lactose-intolerant individuals"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "egg-white-protein",
+            "name": "Egg White Protein",
+            "scoreDelta": 4,
+            "reason": "A dairy-free, highly bioavailable protein alternative."
+          }
+        ]
+      },
+      {
+        "id": "maltitol-syrup",
+        "name": "Maltitol Syrup",
+        "scientificName": "Hydrogenated maltose syrup",
+        "risk": "moderate",
+        "reason": "High glycemic index for a sugar alcohol; causes gastrointestinal distress (gas, bloating, laxative effect) in moderate amounts.",
+        "purpose": "Low-calorie sweetener and humectant",
+        "description": "A sugar alcohol used as a sugar substitute, which is only partially digested by the body.",
+        "healthEffects": [
+          "Can cause abdominal pain, bloating, and diarrhea",
+          "Spikes blood glucose and insulin levels more than other sugar alcohols"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Restricted"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "erythritol",
+            "name": "Erythritol",
+            "scoreDelta": 15,
+            "reason": "Has a near-zero glycemic index and much higher digestive tolerance."
+          },
+          {
+            "id": "allulose",
+            "name": "Allulose",
+            "scoreDelta": 18,
+            "reason": "A rare sugar with zero glycemic impact and no cooling aftertaste."
+          }
+        ]
+      },
+      {
+        "id": "vegetable-glycerin",
+        "name": "Vegetable Glycerin",
+        "scientificName": "Glycerol",
+        "risk": "safe",
+        "reason": "Generally recognized as safe with low toxicity.",
+        "purpose": "Humectant to retain moisture and softness",
+        "description": "A clear, odorless liquid derived from plant fats.",
+        "healthEffects": [
+          "Helps retain bar moisture and texture",
+          "Mild laxative effect in extremely high doses"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "almond-butter",
+        "name": "Almond Butter",
+        "scientificName": "Prunus dulcis butter",
+        "risk": "safe",
+        "reason": "Nutrient-dense food, but is a tree nut allergen.",
+        "purpose": "Healthy fat source, binder, and flavor",
+        "description": "A food paste made from grinding almonds into a nut butter.",
+        "healthEffects": [
+          "Provides monounsaturated fats",
+          "Rich in Vitamin E",
+          "Allergenic to those with tree nut allergies"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "sunflower-seed-butter",
+            "name": "Sunflower Seed Butter",
+            "scoreDelta": 5,
+            "reason": "A nut-free alternative with similar texture and healthy fats."
+          }
+        ]
+      },
+      {
+        "id": "alkalized-cocoa-powder",
+        "name": "Alkalized Cocoa Powder",
+        "scientificName": "Dutch-processed cocoa",
+        "risk": "safe",
+        "reason": "Safe for consumption, though alkalization reduces natural antioxidant levels.",
+        "purpose": "Flavoring and color",
+        "description": "Cocoa powder that has been treated with an alkalizing agent to reduce acidity and bitterness.",
+        "healthEffects": [
+          "Provides chocolate flavor",
+          "Lower antioxidant (flavanol) content than natural cocoa"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "natural-cocoa-powder",
+            "name": "Natural Cocoa Powder",
+            "scoreDelta": 3,
+            "reason": "Retains higher levels of beneficial antioxidants (flavanols)."
+          }
+        ]
+      },
+      {
+        "id": "palm-kernel-oil",
+        "name": "Palm Kernel Oil",
+        "scientificName": "Elaeis guineensis kernel oil",
+        "risk": "moderate",
+        "reason": "Very high in saturated fats (approx. 80%), which can negatively impact cardiovascular health.",
+        "purpose": "Structure, texture, and shelf-life extension",
+        "description": "An edible plant oil derived from the kernel of the oil palm.",
+        "healthEffects": [
+          "May increase LDL cholesterol levels",
+          "High in saturated fatty acids"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "cocoa-butter",
+            "name": "Cocoa Butter",
+            "scoreDelta": 8,
+            "reason": "Contains stearic acid which has a neutral effect on blood cholesterol levels."
+          }
+        ]
+      },
+      {
+        "id": "chocolate",
+        "name": "Chocolate",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Standard food ingredient with no inherent safety risks.",
+        "purpose": "Flavor and coating",
+        "description": "A preparation of roasted and ground cacao seeds, typically sweetened.",
+        "healthEffects": [
+          "Provides flavor",
+          "Contains small amounts of antioxidants"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "stevia-sweetened-dark-chocolate",
+            "name": "Stevia-Sweetened Dark Chocolate",
+            "scoreDelta": 5,
+            "reason": "Reduces sugar and carbohydrate impact while maintaining chocolate flavor."
+          }
+        ]
+      },
+      {
+        "id": "sunflower-oil",
+        "name": "Sunflower Oil",
+        "scientificName": "Helianthus annuus seed oil",
+        "risk": "safe",
+        "reason": "Generally safe, but high in Omega-6 fatty acids which can be pro-inflammatory if consumed in excess.",
+        "purpose": "Texture and fat source",
+        "description": "The non-volatile oil compressed from the seeds of sunflower.",
+        "healthEffects": [
+          "Provides Vitamin E",
+          "High Omega-6 to Omega-3 ratio"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "high-oleic-sunflower-oil",
+            "name": "High-Oleic Sunflower Oil",
+            "scoreDelta": 3,
+            "reason": "Higher in monounsaturated fats and more stable under oxidation."
+          }
+        ]
+      },
+      {
+        "id": "water",
+        "name": "Water",
+        "scientificName": "Dihydrogen monoxide",
+        "risk": "safe",
+        "reason": "Essential for life.",
+        "purpose": "Hydration and texture control",
+        "description": "A transparent, odorless, tasteless liquid compound.",
+        "healthEffects": [
+          "Hydration"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "lecithin",
+        "name": "Lecithin",
+        "scientificName": "Phosphatidylcholine",
+        "risk": "safe",
+        "reason": "Safe emulsifier, though often derived from soy (allergen).",
+        "purpose": "Emulsifier to prevent oil separation",
+        "description": "A fatty substance occurring in animal and plant tissues, used to stabilize mixtures.",
+        "healthEffects": [
+          "Improves texture and stability",
+          "Source of choline"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "sunflower-lecithin",
+            "name": "Sunflower Lecithin",
+            "scoreDelta": 2,
+            "reason": "Avoids soy allergen concerns while providing identical emulsification."
+          }
+        ]
+      },
+      {
+        "id": "natural-flavor",
+        "name": "Natural Flavor",
+        "scientificName": null,
+        "risk": "safe",
+        "reason": "Generally recognized as safe flavoring agents.",
+        "purpose": "Enhance taste profile",
+        "description": "Flavoring constituents derived from spices, fruits, vegetables, herbs, or other plant/animal materials.",
+        "healthEffects": [
+          "Improves palatability"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": []
+      },
+      {
+        "id": "salt",
+        "name": "Salt",
+        "scientificName": "Sodium chloride",
+        "risk": "safe",
+        "reason": "Safe in standard dietary amounts, but excessive intake can affect blood pressure.",
+        "purpose": "Flavor enhancer",
+        "description": "A mineral substance composed primarily of sodium chloride.",
+        "healthEffects": [
+          "Essential electrolyte",
+          "Excessive intake may increase blood pressure"
+        ],
+        "countries": [
+          {
+            "country": "United States",
+            "flag": "🇺🇸",
+            "status": "Approved"
+          },
+          {
+            "country": "European Union",
+            "flag": "🇪🇺",
+            "status": "Approved"
+          },
+          {
+            "country": "India",
+            "flag": "🇮🇳",
+            "status": "Approved"
+          }
+        ],
+        "alternatives": [
+          {
+            "id": "sea-salt",
+            "name": "Sea Salt",
+            "scoreDelta": 1,
+            "reason": "Contains trace minerals and is often less processed."
+          }
+        ]
+      }
+    ]
+  }
+]
